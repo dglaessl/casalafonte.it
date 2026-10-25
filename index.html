@@ -226,6 +226,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
 .hours p{color:var(--muted);font-size:.98rem;line-height:1.45}
 @media (max-width:900px){.hours{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4rem 1.6rem}}
 @media (max-width:520px){.hours{grid-template-columns:1fr}}
+
+.area-pics{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.5vw,32px);margin-bottom:clamp(32px,4vw,52px);max-width:760px}
+.area-pics figure{margin:0}
+.area-pics img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.area-pics figcaption{font-family:var(--f-display);font-style:italic;color:var(--muted);font-size:1rem;padding-top:.5rem}
 </style>
 </head>
 <body>
@@ -331,7 +336,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
         <p data-i18n="r3_p">A main bedroom with a king-size bed and a baby crib on request, and a smaller bedroom with a queen-size bed. Both have beamed ceilings and views over the garden. Next door is the newly renovated bathroom.</p>
       </div>
       <div class="room">
-        <img class="ph" src="img/bedroom-sm.jpg" alt="The guesthouse bedroom with a large bed, reading lamps and terracotta floor" loading="lazy">
+        <img class="ph" src="img/guesthouse-pergola-sm.jpg" alt="The stone guesthouse with its terrace under a vine-covered pergola" loading="lazy">
         <p class="where" data-i18n="r4_w">Guesthouse</p>
         <h3 data-i18n="r4_h">A suite of its own</h3>
         <p data-i18n="r4_p">A former stone outbuilding across the garden, now a private suite with a queen-size bed, its own bathroom and the washing machine. Its terrace sits under a vine-covered pergola. Grandparents, a second couple or teenagers love the independence.</p>
@@ -343,7 +348,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
         <p data-i18n="r5_p">Stone terraces on several levels follow the slope. There is a long table in the open, a covered loggia with a gas barbecue for warm evenings, sun loungers, and plenty of quiet corners to read in the shade.</p>
       </div>
       <div class="room">
-        <img class="ph" src="img/pool-terrace-sm.jpg" alt="The pool terrace along the house" loading="lazy">
+        <img class="ph" src="img/pool-garden-sm.jpg" alt="The saltwater pool in the garden, with lawn, trees and the hills beyond" loading="lazy">
         <p class="where" data-i18n="r6_w">Outside</p>
         <h3 data-i18n="r6_h">Heated saltwater pool</h3>
         <p data-i18n="r6_p">A private saltwater pool, heated with local geothermal energy, with an outdoor shower and views south over the valley. Swim before breakfast, or at dusk when the hills turn gold.</p>
@@ -392,6 +397,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
       <p class="label" data-i18n="ar_l">The area</p>
       <h2 data-i18n="ar_h">Between Volterra and the sea</h2>
       <p class="lede col" data-i18n="ar_p">San Dalmazio lies in the Val di Cecina, one of the quieter corners of Tuscany. Etruscan towns, wine estates and the coast are all within an hour. Times are by car from the house.</p>
+    </div>
+    <div class="area-pics">
+      <figure><img src="img/church-sm.jpg" alt="The bell tower of San Dalmazio's church above the valley" loading="lazy"><figcaption data-i18n="ap1">The village church, looking out over the valley</figcaption></figure>
+      <figure><img src="img/village-lane-sm.jpg" alt="A sunlit stone lane in San Dalmazio with flowers on a balcony" loading="lazy"><figcaption data-i18n="ap2">A lane in San Dalmazio</figcaption></figure>
     </div>
     <div class="places">
       <div><span class="t" data-i18n="t_walk">a minute on foot</span><h3>La Rocca</h3><p data-i18n="p1">Stefano's family restaurant on the village square, with fresh bread every day and simple, very good Tuscan food.</p></div>
