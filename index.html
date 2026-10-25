@@ -191,6 +191,30 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
 .consent div{display:flex;gap:.6rem;flex-wrap:wrap}
 .consent .btn{padding:.5rem 1.1rem;font-size:.9rem}
 @media (max-width:520px){.consent{left:16px;right:16px;max-width:none;bottom:76px}}
+
+/* availability + quote + direct perks */
+.avail{margin-top:clamp(56px,7vw,88px)}
+.avail-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.5rem 2rem;margin-bottom:1.4rem}
+.legend{display:flex;gap:1.2rem;font-size:.85rem;color:var(--muted);align-items:center}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border:1px solid var(--rule);margin-right:.4rem;vertical-align:-1px}
+.legend .lb{background:var(--soft);border-color:var(--soft)}
+.months{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.6rem 2rem}
+@media (max-width:900px){.months{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.month h4{font-family:var(--f-display);font-weight:400;font-style:italic;font-size:1.1rem;margin:0 0 .4rem;color:var(--ink)}
+.month .g{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;font-size:.72rem;font-variant-numeric:tabular-nums;text-align:center}
+.month .g span{padding:.28rem 0;color:var(--ink)}
+.month .g .wd{color:var(--soft);font-size:.65rem}
+.month .g .b{background:color-mix(in srgb,var(--soft) 55%,transparent);color:var(--paper);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--paper) 60%,transparent)}
+.month .g .x{color:var(--rule)}
+.upd{font-size:.8rem;color:var(--soft);margin-top:1rem}
+.quote{display:grid;gap:.25rem;font-size:.95rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.quote b{color:var(--ink);font-weight:400}
+.direct{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 clamp(24px,4vw,56px);margin-top:clamp(48px,6vw,72px)}
+.direct div{border-top:1px solid var(--rule);padding:1.1rem 0;display:grid;gap:.3rem}
+.direct h3{font-size:1.25rem}
+.direct p{color:var(--muted);font-size:.93rem}
+@media (max-width:900px){.direct{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.direct{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -376,6 +400,19 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
       </div>
     </div>
 
+    <div class="direct">
+      <div><h3 data-i18n="dp1h">No service fees</h3><p data-i18n="dp1p">The price you see includes cleaning, linen, towels and pool heating. Nothing is added at checkout.</p></div>
+      <div><h3 data-i18n="dp2h">Straight to us</h3><p data-i18n="dp2p">You deal with Daniel and Eva directly, from your first question to the day you leave.</p></div>
+      <div><h3 data-i18n="dp3h">Flexible arrival days</h3><p data-i18n="dp3p">Outside July and August you can arrive on any day of the week.</p></div>
+      <div><h3 data-i18n="dp4h">Coming back</h3><p data-i18n="dp4p">Guests who have stayed with us before get 5% off every later stay.</p></div>
+    </div>
+
+    <div class="avail" id="availability" hidden>
+      <div class="avail-head"><h3 data-i18n="av_h">Availability 2027</h3><div class="legend"><span><i></i><span data-i18n="av_free">Free</span></span><span><i class="lb"></i><span data-i18n="av_bk">Booked</span></span></div></div>
+      <div class="months" id="months"></div>
+      <p class="upd" id="upd"></p>
+    </div>
+
     <form id="request" novalidate>
       <h3 data-i18n="rq_h">Request your dates</h3>
       <div class="row">
@@ -392,6 +429,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
       <button class="btn" type="submit" data-i18n="fl_btn">See the price</button>
       <div class="out" id="out" hidden>
         <p class="est" id="est"></p>
+        <div class="quote" id="quote"></div>
         <div class="mail"><a class="btn" id="mailbtn" href="#" data-i18n="send">Send us your request</a><span><span data-i18n="or">or write to</span> <code>dglaessl@gmail.com</code></span><button class="ghost" type="button" id="copy" data-i18n="copy">Copy message</button><span id="copied" role="status"></span></div>
       </div>
     </form>
@@ -460,7 +498,7 @@ var SEASONS=[
  {from:[10,1],to:[10,31],price:430,min:4,k:"se5"}];
 var D=window.CLF_I18N||{};
 D.en=Object.assign({se1:"Spring, 25 March – 31 May",seh1:"Easter 2027, 25 March – 5 April",seh2:"Ascension and Pentecost 2027, 6 – 26 May",se2:"June",se3:"July and August",se4:"September",se5:"October",
- minn:"minimum {n} nights",pn:"per night",nights:"nights",est:"Your stay",allin:"all-inclusive",
+ minn:"minimum {n} nights",av_upd:"Updated {d}",clash:"Some of these nights are already booked; see the calendar above.",q_dep:"30% deposit to confirm",q_bal:"Balance due by {d}",q_now:"Arrival is less than 30 days away, so the full amount is due on booking.",q_cx:"Full refund of the deposit if you cancel by {d}",q_cx0:"Arrival is less than 60 days away, so the deposit is non-refundable.",q_name:"Add your name and email to send the request.",fill2:"Please add your arrival and departure dates.",pn:"per night",nights:"nights",est:"Your stay",allin:"all-inclusive",
  closed:"Some nights fall outside the season (25 March – 31 October).",short:"This season has a minimum stay of {n} nights.",order:"Departure must be after arrival.",fill:"Please add your name, email and dates.",
  copied:"Copied",copyfail:"Select the text and copy it",subj:"Casa La Fonte – booking request",hello:"Hi Daniel and Eva,",body:"we would like to stay at Casa La Fonte from {in} to {out} ({n} nights): {a} adults and {c} children.",sign:"Best regards,"},D.en||{});
 document.querySelectorAll("[data-i18n]").forEach(function(el){var k=el.getAttribute("data-i18n");if(!(k in D.en))D.en[k]=el.innerHTML;});
@@ -469,22 +507,39 @@ function f(s,o){return s.replace(/\{(\w+)\}/g,function(_,k){return o[k];});}
 function t(k){return (D[lang]&&D[lang][k]!=null)?D[lang][k]:D.en[k];}
 function eur(n){return "€ "+n.toLocaleString("de-DE");}
 function rates(){var h="";SEASONS.forEach(function(s){h+='<div class="rate"><span>'+t(s.k)+'</span><span class="p">'+eur(s.price)+'</span><small>'+f(t("minn"),{n:s.min})+'</small><small>'+t("pn")+'</small></div>';});document.getElementById("rates").innerHTML=h;}
-function setLang(l){if(LANGS.indexOf(l)<0)l="en";lang=l;document.documentElement.lang=l;document.querySelectorAll("[data-i18n]").forEach(function(el){el.innerHTML=t(el.getAttribute("data-i18n"));});LANGS.forEach(function(k){document.getElementById("l-"+k).setAttribute("aria-pressed",String(k===l));});rates();try{localStorage.setItem("clf-lang",l);}catch(e){}if(!document.getElementById("out").hidden)build();}
+function setLang(l){if(LANGS.indexOf(l)<0)l="en";lang=l;document.documentElement.lang=l;document.querySelectorAll("[data-i18n]").forEach(function(el){el.innerHTML=t(el.getAttribute("data-i18n"));});LANGS.forEach(function(k){document.getElementById("l-"+k).setAttribute("aria-pressed",String(k===l));});rates();cal();try{localStorage.setItem("clf-lang",l);}catch(e){}if(!document.getElementById("out").hidden)build();}
 function season(d){var x=(d.getUTCMonth()+1)*100+d.getUTCDate();var L=SEASONS.filter(function(s){return s.hol;}).concat(SEASONS.filter(function(s){return !s.hol;}));for(var i=0;i<L.length;i++){var s=L[i];if(x>=s.from[0]*100+s.from[1]&&x<=s.to[0]*100+s.to[1])return s;}return null;}
 function ds(iso){var p=iso.split("-");return p[2]+"."+p[1]+"."+p[0];}
 function v(id){return document.getElementById(id).value.trim();}
 var lastText="";
+var BUSY=[],busyUpd="";
+function isoAdd(iso,d){var x=new Date(iso+"T00:00:00Z");x.setUTCDate(x.getUTCDate()+d);return x.toISOString().slice(0,10);}
+function booked(iso){for(var i=0;i<BUSY.length;i++){if(iso>=BUSY[i][0]&&iso<BUSY[i][1])return true;}return false;}
+function cal(){var box=document.getElementById("months");if(!box)return;document.getElementById("availability").hidden=!busyUpd;if(!busyUpd)return;var loc=lang==="en"?"en-GB":lang,h="",y=2027;
+ var wd=[];for(var k=0;k<7;k++){wd.push(new Intl.DateTimeFormat(loc,{weekday:"narrow",timeZone:"UTC"}).format(new Date(Date.UTC(2027,1,1+k))));}
+ for(var m=2;m<=9;m++){var first=new Date(Date.UTC(y,m,1)),days=new Date(Date.UTC(y,m+1,0)).getUTCDate(),off=(first.getUTCDay()+6)%7;
+  h+='<div class="month"><h4>'+new Intl.DateTimeFormat(loc,{month:"long",timeZone:"UTC"}).format(first)+'</h4><div class="g">';
+  wd.forEach(function(w){h+='<span class="wd">'+w+'</span>';});
+  for(var e=0;e<off;e++)h+='<span></span>';
+  for(var d=1;d<=days;d++){var iso=y+"-"+String(m+1).padStart(2,"0")+"-"+String(d).padStart(2,"0");var out=(m===2&&d<25);h+='<span class="'+(out?"x":(booked(iso)?"b":""))+'">'+d+'</span>';}
+  h+='</div></div>';}
+ box.innerHTML=h;document.getElementById("upd").textContent=busyUpd?f(t("av_upd"),{d:ds(busyUpd.slice(0,10))}):"";}
+fetch("busy.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).then(function(j){if(j){BUSY=j.busy||[];busyUpd=j.updated||"";}cal();}).catch(function(){cal();});
 function build(){
  var name=v("f-name"),email=v("f-email"),di=v("f-in"),dout=v("f-out"),a=+v("f-ad")||0,c=+v("f-ch")||0,msg=v("f-msg");
- var est=document.getElementById("est");est.className="est";document.getElementById("out").hidden=false;
- if(!name||!email||!di||!dout){est.textContent=t("fill");est.className="err";document.getElementById("mailbtn").hidden=true;return;}
- document.getElementById("mailbtn").hidden=false;
- var d1=new Date(di+"T00:00:00Z"),d2=new Date(dout+"T00:00:00Z"),n=Math.round((d2-d1)/864e5),total=0,minN=0,notes=[];
- if(n<=0)notes.push(t("order"));else{for(var i=0;i<n;i++){var s=season(new Date(d1.getTime()+i*864e5));if(!s){notes=[t("closed")];total=0;break;}total+=s.price;minN=Math.max(minN,s.min);}if(total&&n<minN)notes.push(f(t("short"),{n:minN}));}
+ var est=document.getElementById("est"),q=document.getElementById("quote");est.className="est";q.innerHTML="";document.getElementById("out").hidden=false;
+ var mb=document.getElementById("mailbtn");
+ if(!di||!dout){est.textContent=t("fill2");est.className="err";mb.hidden=true;return;}
+ var d1=new Date(di+"T00:00:00Z"),d2=new Date(dout+"T00:00:00Z"),n=Math.round((d2-d1)/864e5),total=0,minN=0,notes=[],clash=false;
+ if(n<=0)notes.push(t("order"));else{for(var i=0;i<n;i++){var day=new Date(d1.getTime()+i*864e5),s=season(day);if(!s){notes=[t("closed")];total=0;break;}total+=s.price;minN=Math.max(minN,s.min);if(booked(day.toISOString().slice(0,10)))clash=true;}if(total&&n<minN)notes.push(f(t("short"),{n:minN}));}
+ if(clash)notes.push(t("clash"));
  est.textContent=(total?t("est")+": "+eur(total)+" · "+n+" "+t("nights")+", "+t("allin"):"")+(notes.length?(total?" · ":"")+notes.join(" "):"");
- if(!total)est.className="err";
- lastText=t("hello")+"\n\n"+f(t("body"),{in:ds(di),out:ds(dout),n:n>0?n:"?",a:a,c:c})+(msg?"\n\n"+msg:"")+"\n\n"+t("sign")+"\n"+name+"\n"+email;
- document.getElementById("mailbtn").href="mailto:dglaessl@gmail.com?subject="+encodeURIComponent(t("subj"))+"&body="+encodeURIComponent(lastText);
+ if(!total||clash)est.className=total?"est":"err";
+ if(total){var dep=Math.round(total*0.3),today=new Date().toISOString().slice(0,10),bal=isoAdd(di,-30),cx=isoAdd(di,-60);
+  q.innerHTML='<span>'+t("q_dep")+': <b>'+eur(dep)+'</b></span><span>'+(bal>today?f(t("q_bal"),{d:ds(bal)})+': <b>'+eur(total-dep)+'</b>':t("q_now"))+'</span><span>'+(cx>today?f(t("q_cx"),{d:ds(cx)}):t("q_cx0"))+'</span>';}
+ if(!name||!email){mb.hidden=true;notes.length||q.insertAdjacentHTML("beforeend",'<span>'+t("q_name")+'</span>');}else mb.hidden=false;
+ lastText=t("hello")+"\n\n"+f(t("body"),{in:ds(di),out:ds(dout),n:n>0?n:"?",a:a,c:c})+(total?"\n"+t("est")+": "+eur(total):"")+(msg?"\n\n"+msg:"")+"\n\n"+t("sign")+"\n"+name+"\n"+email;
+ mb.href="mailto:dglaessl@gmail.com?subject="+encodeURIComponent(t("subj"))+"&body="+encodeURIComponent(lastText);
 }
 document.querySelectorAll(".langs button").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-l"));});});
 document.getElementById("request").addEventListener("submit",function(e){e.preventDefault();build();});
