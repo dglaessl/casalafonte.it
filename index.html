@@ -99,6 +99,8 @@ section{padding-block:clamp(52px,6.5vw,96px)}
 .rooms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(32px,4vw,52px) clamp(24px,3vw,40px)}
 .room{display:grid;gap:.8rem;align-content:start}
 .room .ph{aspect-ratio:3/2;width:100%;object-fit:cover;background:var(--paper-2)}
+.room .ph.duo{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:none}
+.room .ph.duo img{width:100%;height:100%;object-fit:cover;min-height:0}
 .room .ph.empty{display:grid;place-items:center;font-family:var(--f-display);font-style:italic;color:var(--soft);font-size:1.1rem}
 .room .where{font-family:var(--f-display);font-style:italic;color:var(--muted);font-size:1.05rem}
 .room p{color:var(--muted);font-size:.95rem}
@@ -318,7 +320,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
     </div>
     <div class="rooms">
       <div class="room">
-        <img class="ph" src="img/dining-sm.jpg" alt="Dining room with a long oak table, terracotta floor and beamed ceiling" loading="lazy">
+        <img class="ph" src="img/dining-set-sm.jpg" alt="The long oak dining table set for dinner under the beamed ceiling" loading="lazy">
         <p class="where" data-i18n="r1_w">Main house, ground floor</p>
         <h3 data-i18n="r1_h">Kitchen and dining room</h3>
         <p data-i18n="r1_p">The heart of the house. A well-equipped kitchen with a large island opens into the dining room, where an oak table seats eight under the old beams. French doors lead straight out to the terrace, so breakfast often moves outside.</p>
@@ -326,11 +328,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
       <div class="room">
         <img class="ph" src="img/living-sm.jpg" alt="Living room with sofa, armchairs and a tall bookshelf" loading="lazy">
         <p class="where" data-i18n="r2_w">Main house, ground floor</p>
-        <h3 data-i18n="r2_h">Two living rooms</h3>
-        <p data-i18n="r2_p">One for reading, one for being together. Deep sofas, two armchairs, a wall of books, and a built-in daybed by the TV that sleeps a seventh guest. A single sofa bed can also go in whichever room you like. The thick walls keep both rooms cool on summer afternoons.</p>
+        <h3 data-i18n="r2_h">The living room</h3>
+        <p data-i18n="r2_p">One generous space that works for everyone: a reading corner by the wall of books, deep sofas for being together, and a built-in daybed by the TV that sleeps a seventh guest. A single sofa bed can go in whichever room you like. The thick walls keep it cool on summer afternoons.</p>
       </div>
       <div class="room">
-        <div class="ph empty" data-i18n="ph_soon">Photo to follow</div>
+        <div class="ph duo"><img src="img/bedroom-main-sm.jpg" alt="The main bedroom with a king-size bed under the beamed ceiling" loading="lazy"><img src="img/bedroom-second-sm.jpg" alt="The second bedroom with a queen-size bed and a shelf of framed prints" loading="lazy"></div>
         <p class="where" data-i18n="r3_w">Main house, upstairs</p>
         <h3 data-i18n="r3_h">Two bedrooms</h3>
         <p data-i18n="r3_p">A main bedroom with a king-size bed and a baby crib on request, and a smaller bedroom with a queen-size bed. Both have beamed ceilings and views over the garden. Next door is the newly renovated bathroom.</p>
