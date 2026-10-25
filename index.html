@@ -513,8 +513,9 @@ function set(y){try{localStorage.setItem("clf-consent",y?"yes":"no");}catch(e){}
 document.getElementById("ck-yes").addEventListener("click",function(){set(true);});
 document.getElementById("ck-no").addEventListener("click",function(){set(false);});
 function ev(n,p){try{gtag("event",n,p||{});}catch(e){}}
-document.getElementById("mailbtn").addEventListener("click",function(){ev("generate_lead",{method:"request_form"});});
-document.getElementById("copy").addEventListener("click",function(){ev("generate_lead",{method:"copy_message"});});
+function conv(m){ev("conversion",{send_to:"AW-18537138830/xeh3CMzIyakdEI6VmYdF",value:150.0,currency:"EUR"});ev("generate_lead",{method:m});}
+document.getElementById("mailbtn").addEventListener("click",function(){conv("request_form");});
+document.getElementById("copy").addEventListener("click",function(){conv("copy_message");});
 document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){if(a.id!=="mailbtn")a.addEventListener("click",function(){ev("contact",{method:"email"});});});
 document.getElementById("request").addEventListener("submit",function(){ev("view_price");});})();
 </script>
