@@ -11,7 +11,7 @@ const b = await chromium.launch();
 const p = await b.newPage({ viewport: { width: 1365, height: 900 } });
 const errs = [];
 const LOCAL = process.env.LOCAL_ROOT;
-async function local(pg) { if (!LOCAL) return; await pg.route('**/*', async r => { const u = new URL(r.request().url()); if (u.hostname !== 'casalafonte.it') return u.hostname.includes('googletagmanager') ? r.fulfill({ body: '' }) : r.continue(); let f = decodeURIComponent(u.pathname); if (f === '/') f = '/index.html'; try { const body = fs.readFileSync(path.join(LOCAL, f)); r.fulfill({ body, contentType: f.endsWith('.html') ? 'text/html' : f.endsWith('.js') ? 'text/javascript' : f.endsWith('.json') ? 'application/json' : 'image/jpeg' }); } catch { r.fulfill({ status: 404, body: '' }); } }); }
+async function local(pg) { if (!LOCAL) return; await pg.route('**/*', async r => { const u = new URL(r.request().url()); if (u.hostname !== 'casalafonte.it') return u.hostname.includes('googletagmanager') ? r.fulfill({ body: '' }) : r.continue(); let f = decodeURIComponent(u.pathname); if (f.endsWith('/')) f += 'index.html'; try { const body = fs.readFileSync(path.join(LOCAL, f)); r.fulfill({ body, contentType: f.endsWith('.html') ? 'text/html' : f.endsWith('.js') ? 'text/javascript' : f.endsWith('.json') ? 'application/json' : f.endsWith('.xml') ? 'application/xml' : f.endsWith('.txt') ? 'text/plain' : 'image/jpeg' }); } catch { r.fulfill({ status: 404, body: '' }); } }); }
 await local(p);
 p.on('pageerror', e => errs.push(e.message));
 const res = await p.goto(URL_, { waitUntil: LOCAL ? 'load' : 'networkidle' });
@@ -29,6 +29,10 @@ for (const l of LANGS) {
 }
 await p.click('#l-en');
 
+const pages = await p.evaluate(async (L) => { const o = []; for (const l of L) { try { const r = await fetch('/' + l + '/'); const t = await r.text(); o.push(r.status === 200 && t.includes('<html lang="' + l + '"') && t.includes('hreflang="' + l + '"') ? '' : l); } catch { o.push(l); } } return o.filter(Boolean); }, LANGS.slice(1));
+check(pages.length === 0, `Language pages /de/ /it/ /nl/ /da/ /fr/: ${pages.length ? 'problem with ' + pages.join(', ') : 'all online'}`);
+const seo = await p.evaluate(async () => { const r = await fetch('/robots.txt'), s = await fetch('/sitemap.xml'); return r.ok && s.ok && (await s.text()).includes('/de/'); });
+check(seo, 'robots.txt and sitemap.xml');
 const imgs = await p.evaluate(async () => {
   const all = [...document.images];
   for (const i of all) { i.loading = 'eager'; }

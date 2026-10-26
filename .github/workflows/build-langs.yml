@@ -1,0 +1,31 @@
+name: Build language pages
+
+# Regenerates /de/, /it/, /nl/, /da/, /fr/ and sitemap.xml whenever index.html or i18n.js change.
+on:
+  push:
+    branches: [main]
+    paths: [index.html, i18n.js, scripts/build_langs.js]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: node scripts/build_langs.js
+      - name: Commit if changed
+        run: |
+          git add -A de it nl da fr sitemap.xml
+          if ! git diff --cached --quiet; then
+            git config user.name "language-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git commit -m "Rebuild language pages"
+            git pull --rebase
+            git push
+          fi

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /site-draft/
+
+Sitemap: https://casalafonte.it/sitemap.xml
