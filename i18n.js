@@ -1,5 +1,6 @@
 window.CLF_I18N = {
 de: {
+ wa_or:"oder per WhatsApp:", wa_txt:"Hallo Daniel und Eva, wir interessieren uns für einen Aufenthalt in der Casa La Fonte.",
  nav_house:"Das Haus", nav_well:"Wohlbefinden", nav_prices:"Preise", nav_book:"Anfragen",
  hero_sub:"Ein stilvolles, 400 Jahre altes Bauernhaus mit Gästehaus und privatem beheiztem Pool, am ruhigen Rand eines Hügeldorfs zwischen Volterra und dem Meer.",
  w_l:"Willkommen", w_h:"Ein stilvolles Bauernhaus, und ein sehr ruhiges",
@@ -79,6 +80,7 @@ de: {
  copied:"Kopiert", copyfail:"Text markieren und kopieren", subj:"Casa La Fonte – Buchungsanfrage", hello:"Hallo Daniel und Eva,", body:"wir würden gerne vom {in} bis {out} ({n} Nächte) in der Casa La Fonte wohnen: {a} Erwachsene und {c} Kinder.", sign:"Viele Grüße,"
 },
 it: {
+ wa_or:"oppure su WhatsApp:", wa_txt:"Ciao Daniel ed Eva, siamo interessati a soggiornare a Casa La Fonte.",
  nav_house:"La casa", nav_well:"Benessere", nav_prices:"Prezzi", nav_book:"Richiedi date",
  hero_sub:"Un elegante casale di 400 anni con dépendance e piscina privata riscaldata, ai margini tranquilli di un borgo collinare tra Volterra e il mare.",
  w_l:"Benvenuti", w_h:"Un casale elegante, e molto tranquillo",
@@ -158,6 +160,7 @@ it: {
  copied:"Copiato", copyfail:"Selezionate il testo e copiatelo", subj:"Casa La Fonte – richiesta di prenotazione", hello:"Ciao Daniel ed Eva,", body:"vorremmo soggiornare a Casa La Fonte dal {in} al {out} ({n} notti): {a} adulti e {c} bambini.", sign:"Cordiali saluti,"
 },
 nl: {
+ wa_or:"of via WhatsApp:", wa_txt:"Hallo Daniel en Eva, we hebben interesse in een verblijf in Casa La Fonte.",
  nav_house:"Het huis", nav_well:"Welzijn", nav_prices:"Prijzen", nav_book:"Data aanvragen",
  hero_sub:"Een stijlvolle, 400 jaar oude boerderij met gastenverblijf en privé verwarmd zwembad, aan de rustige rand van een heuveldorp tussen Volterra en de zee.",
  w_l:"Welkom", w_h:"Een stijlvolle boerderij, en een heel rustige",
@@ -237,6 +240,7 @@ nl: {
  copied:"Gekopieerd", copyfail:"Selecteer de tekst en kopieer hem", subj:"Casa La Fonte – boekingsaanvraag", hello:"Hoi Daniel en Eva,", body:"we zouden graag van {in} tot {out} ({n} nachten) in Casa La Fonte verblijven: {a} volwassenen en {c} kinderen.", sign:"Met vriendelijke groet,"
 },
 da: {
+ wa_or:"eller på WhatsApp:", wa_txt:"Hej Daniel og Eva, vi er interesserede i et ophold i Casa La Fonte.",
  nav_house:"Huset", nav_well:"Velvære", nav_prices:"Priser", nav_book:"Forespørg",
  hero_sub:"Et stilfuldt, 400 år gammelt stenhus med gæstehus og privat opvarmet pool, i den stille udkant af en bjerglandsby mellem Volterra og havet.",
  w_l:"Velkommen", w_h:"Et stilfuldt stenhus, og et meget stille",
@@ -316,6 +320,7 @@ da: {
  copied:"Kopieret", copyfail:"Markér teksten og kopiér den", subj:"Casa La Fonte – bookingforespørgsel", hello:"Hej Daniel og Eva,", body:"vi vil gerne bo i Casa La Fonte fra {in} til {out} ({n} nætter): {a} voksne og {c} børn.", sign:"Venlig hilsen,"
 },
 fr: {
+ wa_or:"ou sur WhatsApp :", wa_txt:"Bonjour Daniel et Eva, nous aimerions séjourner à Casa La Fonte.",
  nav_house:"La maison", nav_well:"Bien-être", nav_prices:"Tarifs", nav_book:"Demander vos dates",
  hero_sub:"Une élégante ferme de 400 ans, avec maison d’amis et piscine privée chauffée, à l’orée paisible d’un village perché entre Volterra et la mer.",
  w_l:"Bienvenue", w_h:"Une ferme pleine de caractère, et d’un calme rare",

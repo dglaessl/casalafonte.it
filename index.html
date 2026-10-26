@@ -163,6 +163,7 @@ textarea{min-height:4.5rem;resize:vertical}
 .err{color:#a0432f;font-family:var(--f-body);font-size:1rem}
 .out{display:grid;gap:1rem;max-width:44rem}
 .mail{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;color:var(--muted);font-size:.95rem}
+.wa-line{white-space:nowrap}.wa-line a,footer a.wa{color:var(--ink)}
 .mail code{font-family:var(--f-body);color:var(--ink);user-select:all}
 .ghost{font:inherit;font-family:var(--f-ui);font-size:.82rem;background:none;border:1px solid var(--rule);color:var(--ink);padding:.45rem 1rem;border-radius:999px;cursor:pointer}
 [hidden]{display:none!important}
@@ -571,7 +572,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
       <div class="out" id="out" hidden>
         <p class="est" id="est"></p>
         <div class="quote" id="quote"></div>
-        <div class="mail"><a class="btn" id="mailbtn" href="#" data-i18n="send">Send us your request</a><span><span data-i18n="or">or write to</span> <code>dglaessl@gmail.com</code></span><button class="ghost" type="button" id="copy" data-i18n="copy">Copy message</button><span id="copied" role="status"></span></div>
+        <div class="mail"><a class="btn" id="mailbtn" href="#" data-i18n="send">Send us your request</a><span><span data-i18n="or">or write to</span> <code>dglaessl@gmail.com</code></span><span class="wa-line"><span data-i18n="wa_or">or on WhatsApp:</span> <a class="wa" data-wa="14084420689" href="https://wa.me/14084420689" target="_blank" rel="noopener">Daniel</a> · <a class="wa" data-wa="16505268148" href="https://wa.me/16505268148" target="_blank" rel="noopener">Eva</a></span><button class="ghost" type="button" id="copy" data-i18n="copy">Copy message</button><span id="copied" role="status"></span></div>
       </div>
     </form>
   </div>
@@ -598,7 +599,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
 <footer>
   <div class="wrap">
     <span>Casa La Fonte · 56045 San Dalmazio (PI), Italia · Daniel Glaessl &amp; Eva Friedrich</span>
-    <span>CIN IT050027C25RW27RMD</span>
+    <span>WhatsApp <a class="wa" data-wa="14084420689" href="https://wa.me/14084420689" target="_blank" rel="noopener">Daniel</a> · <a class="wa" data-wa="16505268148" href="https://wa.me/16505268148" target="_blank" rel="noopener">Eva</a> · CIN IT050027C25RW27RMD</span>
   </div>
 </footer>
 
@@ -619,7 +620,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
       <details><summary data-i18n="fq10">Can you arrange yoga, a trainer or hikes?</summary><p data-i18n="fa10">Hiking trails start at the village, and horse riding and thermal springs are close by. For 2027 we are lining up yoga, a personal trainer and massage at the house: mention it in your request and we’ll tell you what’s possible.</p></details>
       <details><summary data-i18n="fq11">What if we need to cancel?</summary><p data-i18n="fa11">If you cancel up to 60 days before arrival, we refund your deposit in full.</p></details>
   </div>
-  <div class="faq-foot"><a class="btn" href="#request" id="faq-book" data-i18n="faq_book">Request dates</a><a href="mailto:dglaessl@gmail.com?subject=Casa%20La%20Fonte" data-i18n="faq_more">Something else? Write to us</a></div>
+  <div class="faq-foot"><a class="btn" href="#request" id="faq-book" data-i18n="faq_book">Request dates</a><a href="mailto:dglaessl@gmail.com?subject=Casa%20La%20Fonte" data-i18n="faq_more">Something else? Write to us</a><span class="wa-line"><span data-i18n="wa_or">or on WhatsApp:</span> <a class="wa" data-wa="14084420689" href="https://wa.me/14084420689" target="_blank" rel="noopener">Daniel</a> · <a class="wa" data-wa="16505268148" href="https://wa.me/16505268148" target="_blank" rel="noopener">Eva</a></span></div>
 </aside>
 
 <div class="consent" id="consent" hidden role="dialog" aria-label="Cookies">
@@ -642,14 +643,14 @@ var D=window.CLF_I18N||{};
 D.en=Object.assign({se1:"Spring, 25 March – 31 May",seh1:"Easter 2027, 25 March – 5 April",seh2:"Ascension and Pentecost 2027, 6 – 26 May",se2:"June",se3:"July and August",se4:"September",se5:"October",
  minn:"minimum {n} nights",av_upd:"Updated {d}",clash:"Some of these nights are already booked; see the calendar above.",q_dep:"30% deposit to confirm",q_bal:"Balance due by {d}",q_now:"Arrival is less than 30 days away, so the full amount is due on booking.",q_cx:"Full refund of the deposit if you cancel by {d}",q_cx0:"Arrival is less than 60 days away, so the deposit is non-refundable.",q_name:"Add your name and email to send the request.",q_pet:"Pet fee, per stay (included above)",body_dog:"We would like to bring {d} dog(s).",fill2:"Please add your arrival and departure dates.",pn:"per night",nights:"nights",est:"Your stay",allin:"all-inclusive",
  closed:"Some nights fall outside the season (25 March – 31 October).",short:"This season has a minimum stay of {n} nights.",order:"Departure must be after arrival.",fill:"Please add your name, email and dates.",
- copied:"Copied",copyfail:"Select the text and copy it",subj:"Casa La Fonte – booking request",hello:"Hi Daniel and Eva,",body:"we would like to stay at Casa La Fonte from {in} to {out} ({n} nights): {a} adults and {c} children.",sign:"Best regards,"},D.en||{});
+ copied:"Copied",copyfail:"Select the text and copy it",subj:"Casa La Fonte – booking request",hello:"Hi Daniel and Eva,",body:"we would like to stay at Casa La Fonte from {in} to {out} ({n} nights): {a} adults and {c} children.",sign:"Best regards,",wa_txt:"Hi Daniel and Eva, we're interested in staying at Casa La Fonte."},D.en||{});
 document.querySelectorAll("[data-i18n]").forEach(function(el){var k=el.getAttribute("data-i18n");if(!(k in D.en))D.en[k]=el.innerHTML;});
 var LANGS=["en","de","it","nl","da","fr"],lang="en";
 function f(s,o){return s.replace(/\{(\w+)\}/g,function(_,k){return o[k];});}
 function t(k){return (D[lang]&&D[lang][k]!=null)?D[lang][k]:D.en[k];}
 function eur(n){return "€ "+n.toLocaleString("de-DE");}
 function rates(){var h="";SEASONS.forEach(function(s){h+='<div class="rate"><span>'+t(s.k)+'</span><span class="p">'+eur(s.price)+'</span><small>'+f(t("minn"),{n:s.min})+'</small><small>'+t("pn")+'</small></div>';});document.getElementById("rates").innerHTML=h;}
-function setLang(l){if(LANGS.indexOf(l)<0)l="en";lang=l;document.documentElement.lang=l;document.querySelectorAll("[data-i18n]").forEach(function(el){el.innerHTML=t(el.getAttribute("data-i18n"));});LANGS.forEach(function(k){document.getElementById("l-"+k).setAttribute("aria-pressed",String(k===l));});var ls=document.getElementById("lang-sel");if(ls)ls.value=l;rates();cal();try{localStorage.setItem("clf-lang",l);}catch(e){}if(!document.getElementById("out").hidden)build();}
+function setLang(l){if(LANGS.indexOf(l)<0)l="en";lang=l;document.documentElement.lang=l;document.querySelectorAll("[data-i18n]").forEach(function(el){el.innerHTML=t(el.getAttribute("data-i18n"));});LANGS.forEach(function(k){document.getElementById("l-"+k).setAttribute("aria-pressed",String(k===l));});var ls=document.getElementById("lang-sel");if(ls)ls.value=l;document.querySelectorAll("a.wa").forEach(function(a){a.href="https://wa.me/"+a.getAttribute("data-wa")+"?text="+encodeURIComponent(t("wa_txt"));});rates();cal();try{localStorage.setItem("clf-lang",l);}catch(e){}if(!document.getElementById("out").hidden)build();}
 function season(d){var x=(d.getUTCMonth()+1)*100+d.getUTCDate();var L=SEASONS.filter(function(s){return s.hol;}).concat(SEASONS.filter(function(s){return !s.hol;}));for(var i=0;i<L.length;i++){var s=L[i];if(x>=s.from[0]*100+s.from[1]&&x<=s.to[0]*100+s.to[1])return s;}return null;}
 function ds(iso){var p=iso.split("-");return p[2]+"."+p[1]+"."+p[0];}
 function v(id){return document.getElementById(id).value.trim();}
@@ -686,6 +687,7 @@ function build(){
 }
 document.getElementById("lang-sel").addEventListener("change",function(){setLang(this.value);});
 document.querySelectorAll(".langs button").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-l"));});});
+document.querySelectorAll("a.wa").forEach(function(a){a.addEventListener("click",function(){ev("contact",{method:"whatsapp"});});});
 document.getElementById("request").addEventListener("submit",function(e){e.preventDefault();build();});
 document.getElementById("copy").addEventListener("click",function(){var st=document.getElementById("copied");try{navigator.clipboard.writeText(t("subj")+"\n\n"+lastText).then(function(){st.textContent=t("copied");},function(){st.textContent=t("copyfail");});}catch(e){st.textContent=t("copyfail");}});
 var nav=document.getElementById("nav");function onScroll(){nav.classList.toggle("solid",window.scrollY>window.innerHeight*0.7);}window.addEventListener("scroll",onScroll,{passive:true});onScroll();
