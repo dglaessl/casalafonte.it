@@ -658,14 +658,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
 <script>
 (function(){
 var SEASONS=[
- {from:[3,25],to:[5,31],plat:410,min:4,k:"se1"},
- {from:[3,25],to:[4,5],plat:451,min:4,k:"seh1",hol:1},
- {from:[5,6],to:[5,26],plat:451,min:4,k:"seh2",hol:1},
+ {from:[3,25],to:[5,31],plat:375,min:4,k:"se1"},
+ {from:[3,25],to:[4,5],plat:450,min:4,k:"seh1",hol:1},
+ {from:[5,6],to:[5,26],plat:430,min:4,k:"seh2",hol:1},
  {from:[6,1],to:[6,30],plat:475,min:4,k:"se2"},
- {from:[7,1],to:[8,31],plat:495,min:7,k:"se3"},
- {from:[9,1],to:[9,30],plat:475,min:4,k:"se4"},
- {from:[10,1],to:[10,31],plat:440,min:4,k:"se5"}];
-// Direct price = 10% below the Airbnb/Vrbo guest total: platform nightly rate, minus their 10% weekly / 20% monthly discount, plus the €240 cleaning fee.
+ {from:[7,1],to:[8,31],plat:550,min:7,k:"se3"},
+ {from:[9,1],to:[9,30],plat:450,min:4,k:"se4"},
+ {from:[10,1],to:[10,31],plat:375,min:4,k:"se5"}];
+// Direct price = 10% below the Airbnb/Vrbo guest total for up to 4 guests (no extra-guest fee on the website): platform nightly rate, minus their 10% weekly / 20% monthly discount, plus the €240 cleaning fee.
 var CLEAN=240,DIRECT=0.9;
 function disc(n){return n>=28?0.2:(n>=7?0.1:0);}
 function direct(sub,n){return Math.floor(DIRECT*(sub*(1-disc(n))+CLEAN)/5)*5;}
