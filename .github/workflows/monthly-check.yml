@@ -1,0 +1,76 @@
+name: Monthly site check
+
+# Courtesy test of casalafonte.it on the 1st of every month:
+# every external link (restaurants, sights, Convivum, WhatsApp) and the main functions
+# (languages, images, availability calendar, price quote, request email, questions panel, phone layout).
+# If anything fails, an issue is opened in this repository, which GitHub emails to the owner.
+
+on:
+  schedule:
+    - cron: "23 7 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check links
+        id: links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # 403/429 = the site is up but blocks robots (e.g. the Michelin Guide); only real breakage fails.
+          args: >-
+            --accept '200..=299,403,429'
+            --max-retries 3 --retry-wait-time 5 --timeout 30
+            --exclude 'fonts\.googleapis\.com' --exclude 'fonts\.gstatic\.com' --exclude 'googletagmanager'
+            --no-progress
+            index.html i18n.js
+          output: lychee.md
+          fail: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Test the live site
+        id: site
+        continue-on-error: true
+        run: |
+          npm install --no-save playwright@1.48.2
+          npx playwright install --with-deps chromium
+          node scripts/site_check.js https://casalafonte.it/
+
+      - name: Open an issue if something is wrong
+        if: steps.links.outputs.exit_code != '0' || steps.site.outcome != 'success'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const read = f => fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : '(no report)';
+            const body = [
+              'The monthly check of casalafonte.it found a problem.',
+              '',
+              read('site-check.md'),
+              '',
+              '## Links',
+              read('lychee.md'),
+              '',
+              `Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+            ].join('\n');
+            await github.rest.issues.create({
+              owner: context.repo.owner, repo: context.repo.repo,
+              title: `Site check ${new Date().toISOString().slice(0, 10)}: something needs a look`,
+              body: body.slice(0, 60000),
+            });
+
+      - name: Summary
+        if: always()
+        run: |
+          cat site-check.md >> "$GITHUB_STEP_SUMMARY" 2>/dev/null || true
+          cat lychee.md >> "$GITHUB_STEP_SUMMARY" 2>/dev/null || true

@@ -1,1 +1,4 @@
 site-draft/
+node_modules/
+site-check.md
+lychee.md

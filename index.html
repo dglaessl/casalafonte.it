@@ -164,6 +164,8 @@ textarea{min-height:4.5rem;resize:vertical}
 .out{display:grid;gap:1rem;max-width:44rem}
 .mail{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;color:var(--muted);font-size:.95rem}
 .wa-line{white-space:nowrap}.wa-line a,footer a.wa{color:var(--ink)}
+a.x{color:inherit;text-decoration:underline;text-decoration-color:color-mix(in srgb,currentColor 30%,transparent);text-decoration-thickness:1px;text-underline-offset:.22em;transition:color .2s,text-decoration-color .2s}
+a.x:hover{color:var(--sun);text-decoration-color:currentColor}
 .mail code{font-family:var(--f-body);color:var(--ink);user-select:all}
 .ghost{font:inherit;font-family:var(--f-ui);font-size:.82rem;background:none;border:1px solid var(--rule);color:var(--ink);padding:.45rem 1rem;border-radius:999px;cursor:pointer}
 [hidden]{display:none!important}
@@ -475,14 +477,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
 <circle cx="73.8" cy="197.7" r="4.5" class="town"/><text x="82.8" y="195.7" text-anchor="start" class="tn">Livorno</text><text x="82.8" y="219.7" text-anchor="start" class="tt">1 h 15</text>
 </svg><figcaption data-i18n="map_c">Approximate driving times from the house. The marker shows the area, not the exact address.</figcaption></figure>
       <div class="places">
-        <div><span class="t" data-i18n="t_walk">a minute on foot</span><h3>La Rocca</h3><p data-i18n="p1">Stefano's family restaurant on the village square, with fresh bread every day and simple, very good Tuscan food.</p></div>
-        <div><span class="t" data-i18n="t30">30 minutes</span><h3>Volterra</h3><p data-i18n="p2">Etruscan walls, a Roman theatre, alabaster workshops and one of Italy's most beautiful squares. Stay for an aperitivo when the day visitors have left.</p></div>
-        <div><span class="t" data-i18n="t15">15–30 minutes</span><h3 data-i18n="p3h">The geothermal valley</h3><p data-i18n="p3">The Larderello museum, steaming trails through the Biancane and free warm springs at Sasso Pisano, all powered by the same energy that heats your pool.</p></div>
-        <div><span class="t" data-i18n="t50">50 minutes</span><h3>Massa Marittima</h3><p data-i18n="p7">An old mining town on a hill, with a Romanesque cathedral on a sloping square and quiet lanes to wander.</p></div>
-        <div><span class="t" data-i18n="t1h">an hour</span><h3>San Gimignano &amp; Siena</h3><p data-i18n="p4">The town of towers and the Piazza del Campo. Go early in the morning or late in the day.</p></div>
-        <div><span class="t" data-i18n="t1h">an hour</span><h3 data-i18n="p5h">Bolgheri &amp; the coast</h3><p data-i18n="p5">The famous cypress avenue, wine estates, and the pine-backed beaches at Cecina and Baratti.</p></div>
-        <div><span class="t" data-i18n="t90">about 1 h 30</span><h3>Chianti</h3><p data-i18n="p8">Vineyard roads, castle wineries and the market towns of Greve and Panzano.</p></div>
-        <div><span class="t" data-i18n="t80">1 h 20 – 1 h 30</span><h3 data-i18n="p6h">Pisa &amp; Florence</h3><p data-i18n="p6">Easy to combine with your arrival or departure day.</p></div>
+        <div><span class="t" data-i18n="t_walk">a minute on foot</span><h3><a class="x" href="https://www.google.com/maps/search/?api=1&amp;query=Ristorante+La+Rocca+San+Dalmazio" target="_blank" rel="noopener">La Rocca</a></h3><p data-i18n="p1">Stefano's family restaurant on the village square, with fresh bread every day and simple, very good Tuscan food.</p></div>
+        <div><span class="t" data-i18n="t30">30 minutes</span><h3><a class="x" href="https://www.visittuscany.com/en/towns-and-villages/volterra/" target="_blank" rel="noopener">Volterra</a></h3><p data-i18n="p2">Etruscan walls, a Roman theatre, alabaster workshops and one of Italy's most beautiful squares. Stay for an aperitivo when the day visitors have left.</p></div>
+        <div><span class="t" data-i18n="t15">15–30 minutes</span><h3 data-i18n="p3h"><a class="x" href="https://www.visittuscany.com/en/attractions/geothermics-museum-larderello/" target="_blank" rel="noopener">The geothermal valley</a></h3><p data-i18n="p3">The Larderello museum, steaming trails through the Biancane and free warm springs at Sasso Pisano, all powered by the same energy that heats your pool.</p></div>
+        <div><span class="t" data-i18n="t50">50 minutes</span><h3><a class="x" href="https://www.visittuscany.com/en/towns-and-villages/massa-marittima/" target="_blank" rel="noopener">Massa Marittima</a></h3><p data-i18n="p7">An old mining town on a hill, with a Romanesque cathedral on a sloping square and quiet lanes to wander.</p></div>
+        <div><span class="t" data-i18n="t1h">an hour</span><h3><a class="x" href="https://www.visittuscany.com/en/towns-and-villages/san-gimignano/" target="_blank" rel="noopener">San Gimignano</a> &amp; <a class="x" href="https://www.visittuscany.com/en/towns-and-villages/siena/" target="_blank" rel="noopener">Siena</a></h3><p data-i18n="p4">The town of towers and the Piazza del Campo. Go early in the morning or late in the day.</p></div>
+        <div><span class="t" data-i18n="t1h">an hour</span><h3 data-i18n="p5h"><a class="x" href="https://www.visittuscany.com/en/towns-and-villages/bolgheri/" target="_blank" rel="noopener">Bolgheri</a> &amp; the coast</h3><p data-i18n="p5">The famous cypress avenue, wine estates, and the pine-backed beaches at Cecina and Baratti.</p></div>
+        <div><span class="t" data-i18n="t90">about 1 h 30</span><h3><a class="x" href="https://www.visittuscany.com/en/areas/chianti/" target="_blank" rel="noopener">Chianti</a></h3><p data-i18n="p8">Vineyard roads, castle wineries and the market towns of Greve and Panzano.</p></div>
+        <div><span class="t" data-i18n="t80">1 h 20 – 1 h 30</span><h3 data-i18n="p6h"><a class="x" href="https://www.visittuscany.com/en/towns-and-villages/pisa/" target="_blank" rel="noopener">Pisa</a> &amp; <a class="x" href="https://www.visittuscany.com/en/towns-and-villages/florence/" target="_blank" rel="noopener">Florence</a></h3><p data-i18n="p6">Easy to combine with your arrival or departure day.</p></div>
       </div>
     </div>
 
@@ -493,22 +495,22 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
         <div>
           <p class="t" data-i18n="eat_near">Close by</p>
           <ul class="eatlist">
-            <li><span class="n">La Rocca</span><span class="w">San Dalmazio</span><span class="d" data-i18n="t_walk2">1 min on foot</span></li>
-            <li><span class="n">CI.RI.SO</span><span class="w">Montecastelli Pisano</span><span class="d">10 min</span></li>
-            <li><span class="n">La Dispensa</span><span class="w">Pomarance</span><span class="d">15 min</span></li>
-            <li><span class="n">Ristorante Etruria</span><span class="w">Volterra</span><span class="d">30 min</span></li>
-            <li><span class="n">Del Duca</span><span class="w">Volterra</span><span class="d">30 min</span></li>
+            <li><span class="n"><a class="x" href="https://www.google.com/maps/search/?api=1&amp;query=Ristorante+La+Rocca+San+Dalmazio" target="_blank" rel="noopener">La Rocca</a></span><span class="w">San Dalmazio</span><span class="d" data-i18n="t_walk2">1 min on foot</span></li>
+            <li><span class="n"><a class="x" href="https://www.google.com/maps/search/?api=1&amp;query=CI.RI.SO+Montecastelli+Pisano" target="_blank" rel="noopener">CI.RI.SO</a></span><span class="w">Montecastelli Pisano</span><span class="d">10 min</span></li>
+            <li><span class="n"><a class="x" href="https://www.google.com/maps/search/?api=1&amp;query=Ristorante+La+Dispensa+Pomarance" target="_blank" rel="noopener">La Dispensa</a></span><span class="w">Pomarance</span><span class="d">15 min</span></li>
+            <li><span class="n"><a class="x" href="https://www.google.com/maps/search/?api=1&amp;query=Ristorante+Etruria+Volterra" target="_blank" rel="noopener">Ristorante Etruria</a></span><span class="w">Volterra</span><span class="d">30 min</span></li>
+            <li><span class="n"><a class="x" href="https://guide.michelin.com/en/toscana/volterra/restaurant/enoteca-del-duca" target="_blank" rel="noopener">Del Duca</a></span><span class="w">Volterra</span><span class="d">30 min</span></li>
           </ul>
         </div>
         <div>
           <p class="t" data-i18n="eat_far">Worth the drive</p>
           <ul class="eatlist">
-            <li><span class="n">Cannavacciuolo Vineyard <i>★</i></span><span class="w">Terricciola</span><span class="d" data-i18n="ab1h">about 1 h</span></li>
-            <li><span class="n">La Pineta <i>★</i></span><span class="w">Marina di Bibbona</span><span class="d" data-i18n="ab1h">about 1 h</span></li>
-            <li><span class="n">Saporium <i>★</i></span><span class="w">Chiusdino</span><span class="d" data-i18n="ab1h">about 1 h</span></li>
-            <li><span class="n">Arnolfo <i>★★</i></span><span class="w">Colle di Val d'Elsa</span><span class="d" data-i18n="ab1h">about 1 h</span></li>
-            <li><span class="n">Linfa <i>★</i></span><span class="w">San Gimignano</span><span class="d" data-i18n="ab1h">about 1 h</span></li>
-            <li><span class="n">Dario Cecchini</span><span class="w">Panzano in Chianti</span><span class="d" data-i18n="ab90">about 1 h 30</span></li>
+            <li><span class="n"><a class="x" href="https://guide.michelin.com/en/toscana/casanova-di-terricciola/restaurant/cannavacciuolo-vineyard" target="_blank" rel="noopener">Cannavacciuolo Vineyard</a> <i>★</i></span><span class="w">Terricciola</span><span class="d" data-i18n="ab1h">about 1 h</span></li>
+            <li><span class="n"><a class="x" href="https://guide.michelin.com/en/toscana/marina-di-bibbona/restaurant/la-pineta" target="_blank" rel="noopener">La Pineta</a> <i>★</i></span><span class="w">Marina di Bibbona</span><span class="d" data-i18n="ab1h">about 1 h</span></li>
+            <li><span class="n"><a class="x" href="https://guide.michelin.com/en/toscana/chiusdino/restaurant/saporium" target="_blank" rel="noopener">Saporium</a> <i>★</i></span><span class="w">Chiusdino</span><span class="d" data-i18n="ab1h">about 1 h</span></li>
+            <li><span class="n"><a class="x" href="https://guide.michelin.com/en/toscana/colle-di-val-d-elsa/restaurant/arnolfo" target="_blank" rel="noopener">Arnolfo</a> <i>★★</i></span><span class="w">Colle di Val d'Elsa</span><span class="d" data-i18n="ab1h">about 1 h</span></li>
+            <li><span class="n"><a class="x" href="https://guide.michelin.com/en/toscana/san-gimignano/restaurant/linfa" target="_blank" rel="noopener">Linfa</a> <i>★</i></span><span class="w">San Gimignano</span><span class="d" data-i18n="ab1h">about 1 h</span></li>
+            <li><span class="n"><a class="x" href="https://www.dariocecchini.com/" target="_blank" rel="noopener">Dario Cecchini</a></span><span class="w">Panzano in Chianti</span><span class="d" data-i18n="ab90">about 1 h 30</span></li>
           </ul>
           <p class="small" data-i18n="eat_note">★ Michelin stars, 2026 guide. Dario Cecchini is the famous butcher of Panzano; book a table at Solociccia or the Officina della Bistecca next to his shop. Book starred restaurants well ahead.</p>
         </div>
@@ -599,6 +601,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
 <footer>
   <div class="wrap">
     <span>Casa La Fonte · 56045 San Dalmazio (PI), Italia · Daniel Glaessl &amp; Eva Friedrich</span>
+    <span><span data-i18n="ft_mgr">Looked after on site by</span> <a class="x" href="https://www.convivum.it/" target="_blank" rel="noopener">Convivum</a>, Volterra</span>
     <span>WhatsApp <a class="wa" data-wa="14084420689" href="https://wa.me/14084420689" target="_blank" rel="noopener">Daniel</a> · <a class="wa" data-wa="16505268148" href="https://wa.me/16505268148" target="_blank" rel="noopener">Eva</a> · CIN IT050027C25RW27RMD</span>
   </div>
 </footer>
