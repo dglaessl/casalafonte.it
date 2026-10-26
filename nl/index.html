@@ -552,7 +552,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
     <div class="tariff">
       <div>
         <div id="rates"></div>
-        <p class="incl" data-i18n="incl">Per nacht bij een verblijf van een week, alles inbegrepen. Kortere verblijven kosten per nacht iets meer, vanaf vier weken iets minder. Het seizoen loopt van 25 maart tot 31 oktober.</p>
+        <p class="incl" data-i18n="incl">Per nacht bij een verblijf van een week voor maximaal vier gasten, alles inbegrepen; elke extra gast kost € 18 per nacht. Kortere verblijven kosten per nacht iets meer, vanaf vier weken iets minder. Het seizoen loopt van 25 maart tot 31 oktober.</p>
       </div>
       <div class="steps">
         <h3 data-i18n="how_h">Zo werkt boeken</h3>
@@ -668,9 +668,10 @@ var SEASONS=[
  {from:[9,1],to:[9,30],plat:475,min:4,k:"se4"},
  {from:[10,1],to:[10,31],plat:440,min:4,k:"se5"}];
 // Direct price = 10% below the Airbnb/Vrbo guest total: platform nightly rate, minus their 10% weekly / 20% monthly discount, plus the €240 cleaning fee.
-var CLEAN=240,DIRECT=0.9;
+// Like Airbnb/Vrbo, guests 5–7 pay the €20 extra-guest fee per night (not discounted), so the 10% gap holds for every group size.
+var CLEAN=240,DIRECT=0.9,XG=20;
 function disc(n){return n>=28?0.2:(n>=7?0.1:0);}
-function direct(sub,n){return Math.floor(DIRECT*(sub*(1-disc(n))+CLEAN)/5)*5;}
+function direct(sub,n,g){return Math.floor(DIRECT*(sub*(1-disc(n))+XG*Math.max(0,(g||0)-4)*n+CLEAN)/5)*5;}
 SEASONS.forEach(function(s){s.price=Math.floor(DIRECT*(s.plat*0.9+CLEAN/7)/5)*5;});
 var D=window.CLF_I18N||{};
 D.en=Object.assign({se1:"Spring, 25 March – 31 May",seh1:"Easter 2027, 25 March – 5 April",seh2:"Ascension and Pentecost 2027, 6 – 26 May",se2:"June",se3:"July and August",se4:"September",se5:"October",
@@ -708,7 +709,7 @@ function build(){
  if(!di||!dout){est.textContent=t("fill2");est.className="err";mb.hidden=true;return;}
  var d1=new Date(di+"T00:00:00Z"),d2=new Date(dout+"T00:00:00Z"),n=Math.round((d2-d1)/864e5),total=0,minN=0,notes=[],clash=false;
  if(n<=0)notes.push(t("order"));else{for(var i=0;i<n;i++){var day=new Date(d1.getTime()+i*864e5),s=season(day);if(!s){notes=[t("closed")];total=0;break;}total+=s.plat;minN=Math.max(minN,s.min);if(booked(day.toISOString().slice(0,10)))clash=true;}if(total&&n<minN)notes.push(f(t("short"),{n:minN}));}
- if(total)total=direct(total,n);
+ if(total)total=direct(total,n,a+c);
  if(clash)notes.push(t("clash"));
  var pet=(total&&dg>0)?75:0;total+=pet;
  est.textContent=(total?t("est")+": "+eur(total)+" · "+n+" "+t("nights")+", "+t("allin"):"")+(notes.length?(total?" · ":"")+notes.join(" "):"");
