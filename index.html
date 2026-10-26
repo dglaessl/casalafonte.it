@@ -64,7 +64,13 @@ b,strong{font-weight:500}
 .langs button[aria-pressed="true"]{opacity:1;border-bottom-color:currentColor}
 .book{font-family:var(--f-ui);font-size:.82rem;border:1px solid currentColor;padding:.42rem 1rem;border-radius:999px}
 @media (max-width:860px){.links .hide-s{display:none}}
-@media (max-width:420px){.brand{font-size:1.2rem}.links{gap:.8rem}.langs button{padding:.2rem .25rem}.book{padding:.38rem .8rem}}
+.lang-sel{display:none;font-family:var(--f-ui);font-size:.72rem;font-weight:500;letter-spacing:.08em;color:#fff;background:transparent;border:1px solid color-mix(in srgb,currentColor 45%,transparent);border-radius:999px;padding:.3rem .5rem;cursor:pointer}
+.nav.solid .lang-sel{color:var(--ink)}
+.lang-sel option{color:#2b2620}
+.book{white-space:nowrap}
+@media (max-width:600px){.langs{display:none}.lang-sel{display:block}}
+@media (max-width:420px){.nav .wrap{gap:.5rem}.brand{font-size:1.1rem}.links{gap:.45rem}.langs button{padding:.2rem .25rem}.book{padding:.34rem .7rem;font-size:.76rem}.lang-sel{padding:.28rem .35rem}}
+@media (max-width:350px){.nav .wrap{padding-left:12px;padding-right:12px}.brand{font-size:1rem}.book{font-size:.68rem;padding:.3rem .5rem}.lang-sel{font-size:.66rem}}
 
 /* hero */
 .hero{position:relative;min-height:min(88vh,860px);display:flex;align-items:flex-end;color:#fff;background:#4a3f33}
@@ -277,8 +283,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
       <a class="hide-s" href="#wellbeing" data-i18n="nav_well">Wellbeing</a>
       <a class="hide-s" href="#prices" data-i18n="nav_prices">Prices</a>
       <div class="langs" role="group" aria-label="Language">
-        <button type="button" id="l-en" data-l="en">EN</button><button type="button" id="l-de" data-l="de">DE</button><button type="button" id="l-it" data-l="it">IT</button><button type="button" id="l-nl" data-l="nl">NL</button><button type="button" id="l-da" data-l="da">DA</button>
+        <button type="button" id="l-en" data-l="en">EN</button><button type="button" id="l-de" data-l="de">DE</button><button type="button" id="l-it" data-l="it">IT</button><button type="button" id="l-nl" data-l="nl">NL</button><button type="button" id="l-da" data-l="da">DA</button><button type="button" id="l-fr" data-l="fr">FR</button>
       </div>
+      <select class="lang-sel" id="lang-sel" aria-label="Language"><option value="en">EN</option><option value="de">DE</option><option value="it">IT</option><option value="nl">NL</option><option value="da">DA</option><option value="fr">FR</option></select>
       <a class="book" href="#request" data-i18n="nav_book">Request dates</a>
     </div>
   </div>
@@ -637,12 +644,12 @@ D.en=Object.assign({se1:"Spring, 25 March – 31 May",seh1:"Easter 2027, 25 Marc
  closed:"Some nights fall outside the season (25 March – 31 October).",short:"This season has a minimum stay of {n} nights.",order:"Departure must be after arrival.",fill:"Please add your name, email and dates.",
  copied:"Copied",copyfail:"Select the text and copy it",subj:"Casa La Fonte – booking request",hello:"Hi Daniel and Eva,",body:"we would like to stay at Casa La Fonte from {in} to {out} ({n} nights): {a} adults and {c} children.",sign:"Best regards,"},D.en||{});
 document.querySelectorAll("[data-i18n]").forEach(function(el){var k=el.getAttribute("data-i18n");if(!(k in D.en))D.en[k]=el.innerHTML;});
-var LANGS=["en","de","it","nl","da"],lang="en";
+var LANGS=["en","de","it","nl","da","fr"],lang="en";
 function f(s,o){return s.replace(/\{(\w+)\}/g,function(_,k){return o[k];});}
 function t(k){return (D[lang]&&D[lang][k]!=null)?D[lang][k]:D.en[k];}
 function eur(n){return "€ "+n.toLocaleString("de-DE");}
 function rates(){var h="";SEASONS.forEach(function(s){h+='<div class="rate"><span>'+t(s.k)+'</span><span class="p">'+eur(s.price)+'</span><small>'+f(t("minn"),{n:s.min})+'</small><small>'+t("pn")+'</small></div>';});document.getElementById("rates").innerHTML=h;}
-function setLang(l){if(LANGS.indexOf(l)<0)l="en";lang=l;document.documentElement.lang=l;document.querySelectorAll("[data-i18n]").forEach(function(el){el.innerHTML=t(el.getAttribute("data-i18n"));});LANGS.forEach(function(k){document.getElementById("l-"+k).setAttribute("aria-pressed",String(k===l));});rates();cal();try{localStorage.setItem("clf-lang",l);}catch(e){}if(!document.getElementById("out").hidden)build();}
+function setLang(l){if(LANGS.indexOf(l)<0)l="en";lang=l;document.documentElement.lang=l;document.querySelectorAll("[data-i18n]").forEach(function(el){el.innerHTML=t(el.getAttribute("data-i18n"));});LANGS.forEach(function(k){document.getElementById("l-"+k).setAttribute("aria-pressed",String(k===l));});var ls=document.getElementById("lang-sel");if(ls)ls.value=l;rates();cal();try{localStorage.setItem("clf-lang",l);}catch(e){}if(!document.getElementById("out").hidden)build();}
 function season(d){var x=(d.getUTCMonth()+1)*100+d.getUTCDate();var L=SEASONS.filter(function(s){return s.hol;}).concat(SEASONS.filter(function(s){return !s.hol;}));for(var i=0;i<L.length;i++){var s=L[i];if(x>=s.from[0]*100+s.from[1]&&x<=s.to[0]*100+s.to[1])return s;}return null;}
 function ds(iso){var p=iso.split("-");return p[2]+"."+p[1]+"."+p[0];}
 function v(id){return document.getElementById(id).value.trim();}
@@ -677,6 +684,7 @@ function build(){
  lastText=t("hello")+"\n\n"+f(t("body"),{in:ds(di),out:ds(dout),n:n>0?n:"?",a:a,c:c})+(dg?" "+f(t("body_dog"),{d:dg}):"")+(total?"\n"+t("est")+": "+eur(total):"")+(msg?"\n\n"+msg:"")+"\n\n"+t("sign")+"\n"+name+"\n"+email;
  mb.href="mailto:dglaessl@gmail.com?subject="+encodeURIComponent(t("subj"))+"&body="+encodeURIComponent(lastText);
 }
+document.getElementById("lang-sel").addEventListener("change",function(){setLang(this.value);});
 document.querySelectorAll(".langs button").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-l"));});});
 document.getElementById("request").addEventListener("submit",function(e){e.preventDefault();build();});
 document.getElementById("copy").addEventListener("click",function(){var st=document.getElementById("copied");try{navigator.clipboard.writeText(t("subj")+"\n\n"+lastText).then(function(){st.textContent=t("copied");},function(){st.textContent=t("copyfail");});}catch(e){st.textContent=t("copyfail");}});
