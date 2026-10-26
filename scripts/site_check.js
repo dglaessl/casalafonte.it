@@ -11,7 +11,7 @@ const b = await chromium.launch();
 const p = await b.newPage({ viewport: { width: 1365, height: 900 } });
 const errs = [];
 const LOCAL = process.env.LOCAL_ROOT;
-async function local(pg) { if (!LOCAL) return; await pg.route('**/*', async r => { const u = new URL(r.request().url()); if (u.hostname !== 'casalafonte.it') return u.hostname.includes('googletagmanager') ? r.fulfill({ body: '' }) : r.continue(); let f = decodeURIComponent(u.pathname); if (f.endsWith('/')) f += 'index.html'; try { const body = fs.readFileSync(path.join(LOCAL, f)); r.fulfill({ body, contentType: f.endsWith('.html') ? 'text/html' : f.endsWith('.js') ? 'text/javascript' : f.endsWith('.json') ? 'application/json' : f.endsWith('.xml') ? 'application/xml' : f.endsWith('.txt') ? 'text/plain' : 'image/jpeg' }); } catch { r.fulfill({ status: 404, body: '' }); } }); }
+async function local(pg) { if (!LOCAL) return; await pg.route('**/*', async r => { const u = new URL(r.request().url()); if (u.hostname !== 'casalafonte.it') return u.hostname.includes('googletagmanager') ? r.fulfill({ body: '' }) : r.continue(); let f = decodeURIComponent(u.pathname); if (f.endsWith('/')) f += 'index.html'; try { const body = fs.readFileSync(path.join(LOCAL, f)); r.fulfill({ body, contentType: f.endsWith('.html') ? 'text/html' : f.endsWith('.js') ? 'text/javascript' : f.endsWith('.json') ? 'application/json' : f.endsWith('.xml') ? 'application/xml' : f.endsWith('.txt') ? 'text/plain' : f.endsWith('.webp') ? 'image/webp' : 'image/jpeg' }); } catch { r.fulfill({ status: 404, body: '' }); } }); }
 await local(p);
 p.on('pageerror', e => errs.push(e.message));
 const res = await p.goto(URL_, { waitUntil: LOCAL ? 'load' : 'networkidle' });
