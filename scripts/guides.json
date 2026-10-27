@@ -1,0 +1,44 @@
+{
+ "thermal": {
+  "en": {
+   "path": "/guide/thermal-springs-near-volterra/",
+   "h1": "Thermal springs near Volterra"
+  },
+  "de": {
+   "path": "/de/ratgeber/thermalquellen-toskana/",
+   "h1": "Thermalquellen in der Toskana bei Volterra"
+  },
+  "nl": {
+   "path": "/nl/gids/thermale-bronnen-toscane/",
+   "h1": "Thermale bronnen in Toscane bij Volterra"
+  }
+ },
+ "dog": {
+  "en": {
+   "path": "/guide/tuscany-holiday-home-with-dog/",
+   "h1": "A holiday home in Tuscany with your dog"
+  },
+  "de": {
+   "path": "/de/ratgeber/ferienhaus-toskana-mit-hund/",
+   "h1": "Ferienhaus in der Toskana mit Hund"
+  },
+  "nl": {
+   "path": "/nl/gids/vakantiehuis-toscane-met-hond/",
+   "h1": "Vakantiehuis in Toscane met je hond"
+  }
+ },
+ "volterra": {
+  "en": {
+   "path": "/guide/volterra-and-val-di-cecina/",
+   "h1": "Volterra and the Val di Cecina"
+  },
+  "de": {
+   "path": "/de/ratgeber/volterra-und-val-di-cecina/",
+   "h1": "Volterra und das Val di Cecina"
+  },
+  "nl": {
+   "path": "/nl/gids/volterra-en-val-di-cecina/",
+   "h1": "Volterra en de Val di Cecina"
+  }
+ }
+}

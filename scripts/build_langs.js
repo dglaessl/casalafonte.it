@@ -50,6 +50,14 @@ const langs = ['en', ...Object.keys(D)], loc = l => `https://casalafonte.it/${l 
 const today = new Date().toISOString().slice(0, 10);
 // Images listed in the sitemap: the hero/band photos plus every gallery photo
 const IMGS = [...new Set((src.match(/(?:src|data-full)="(\/img\/[^"]+\.(?:jpg|webp))"/g) || []).map(m => m.split('"')[1]).filter(u => !/-sm\./.test(u)))];
+// Guide pages (built by scripts/build_guides.py)
+const GJ = fs.existsSync(path.join(root, 'scripts', 'guides.json')) ? JSON.parse(fs.readFileSync(path.join(root, 'scripts', 'guides.json'), 'utf8')) : {};
+const GUIDE_URLS = Object.values(GJ).map(g => Object.keys(g).map(l => `  <url>
+    <loc>https://casalafonte.it${g[l].path}</loc>
+    <lastmod>${today}</lastmod>
+${Object.keys(g).map(k => `    <xhtml:link rel="alternate" hreflang="${k}" href="https://casalafonte.it${g[k].path}"/>`).join('\n')}
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casalafonte.it${g.en.path}"/>
+  </url>`).join('\n')).join('\n');
 const sm = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${langs.map(l => `  <url>
@@ -59,6 +67,7 @@ ${langs.map(k => `    <xhtml:link rel="alternate" hreflang="${k}" href="${loc(k)
     <xhtml:link rel="alternate" hreflang="x-default" href="${loc('en')}"/>
 ${IMGS.map(u => `    <image:image><image:loc>https://casalafonte.it${u}</image:loc></image:image>`).join('\n')}
   </url>`).join('\n')}
+${GUIDE_URLS}
 </urlset>
 `;
 const prev = fs.existsSync(path.join(root, 'sitemap.xml')) ? fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8') : '';
