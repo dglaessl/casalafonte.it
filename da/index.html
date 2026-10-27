@@ -375,9 +375,9 @@ body.locked{overflow:hidden}
 .menu-langs button[aria-pressed="true"]{border-color:var(--ink)}
 @media (max-width:860px){.menu-btn{display:inline-flex}.lang-sel{display:none!important}}
 @media (min-width:861px){.menu{display:none}}
-.hero-cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
-.hbtn{font-family:var(--f-ui);font-size:.85rem;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.7);border-radius:999px;padding:.55rem 1.15rem;background:rgba(40,24,12,.25);backdrop-filter:blur(4px)}
-.hbtn:hover{background:rgba(40,24,12,.45)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.4rem 1.8rem;margin-top:1.4rem}
+.hbtn{font-family:var(--f-ui);font-size:.8rem;letter-spacing:.03em;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.45);padding:.2rem 0;opacity:.9;transition:opacity .2s,border-color .2s}
+.hbtn:hover{opacity:1;border-bottom-color:#fff}
 .foot-links{margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1px solid var(--rule);justify-content:flex-start!important;gap:.5rem 1.6rem!important}
 .foot-links a{color:var(--ink);text-decoration:none}.foot-links a:hover{text-decoration:underline}
 section[id]{scroll-margin-top:40px}#request{scroll-margin-top:96px}
@@ -422,7 +422,7 @@ section[id]{scroll-margin-top:40px}#request{scroll-margin-top:96px}
     <p class="place">San Dalmazio, Toscana</p>
     <h1>Casa La Fonte</h1>
     <p class="sub" data-i18n="hero_sub">Et stilfuldt, 400 år gammelt stenhus med gæstehus og privat opvarmet pool, i den stille udkant af en bjerglandsby mellem Volterra og havet.</p>
-    <div class="hero-cta"><a class="hbtn" href="#photos" data-i18n="btn_photos">Se alle 41 fotos</a><a class="hbtn" href="#glance" data-i18n="btn_glance">Huset kort fortalt</a></div>
+    <div class="hero-cta"><a class="hbtn" href="#photos" data-i18n="btn_photos">Fotogalleri</a><a class="hbtn" href="#glance" data-i18n="btn_glance">Huset kort fortalt</a></div>
   </div>
 </header>
 
@@ -521,7 +521,7 @@ section[id]{scroll-margin-top:40px}#request{scroll-margin-top:96px}
         <p data-i18n="r6_p">En privat saltvandspool, opvarmet med varmepumpe, med udendørs bruser og udsigt mod syd over dalen. Svøm før morgenmaden, eller i skumringen, når bakkerne bliver gyldne.</p>
       </div>
     </div>
-    <div class="more"><a class="ghost" href="#photos" data-i18n="btn_photos">Se alle 41 fotos</a><a class="ghost" href="#glance" data-i18n="btn_glance">Huset kort fortalt</a></div>
+    <div class="more"><a class="ghost" href="#photos" data-i18n="btn_photos">Fotogalleri</a><a class="ghost" href="#glance" data-i18n="btn_glance">Huset kort fortalt</a></div>
   </div>
 </section>
 
@@ -782,7 +782,7 @@ section[id]{scroll-margin-top:40px}#request{scroll-margin-top:96px}
       <div><b>7</b><span data-i18n="fg1">gæster</span></div><div><b>3</b><span data-i18n="fg2">soveværelser</span></div><div><b>2</b><span data-i18n="fg3">badeværelser</span></div><div><b>2</b><span data-i18n="fg4">huse</span></div><div><b>1</b><span data-i18n="fg5">opvarmet pool</span></div><div><b>400</b><span data-i18n="fg6">år gammelt</span></div>
     </div>
     <div class="gl"><div><h3 data-i18n="gs_h">Sove</h3><ul><li data-i18n="gs1">Hovedhus – Soveværelse 1: kingsize-seng, babyseng efter ønske</li><li data-i18n="gs2">Hovedhus – Soveværelse 2: queensize-seng</li><li data-i18n="gs3">Gæstehus – Soveværelse: queensize-seng, i sin egen bygning</li><li data-i18n="gs4">Stue: indbygget daybed til en syvende gæst</li><li data-i18n="gs5">En enkelt sovesofa til ethvert rum</li><li data-i18n="gs6">Sengetøj og håndklæder, ekstra puder og tæpper</li><li data-i18n="gs7">En ventilator i hvert soveværelse</li></ul></div><div><h3 data-i18n="gb_h">Badeværelser</h3><ul><li data-i18n="gb1">2 badeværelser med bruser: ét i hovedhuset, ét i gæstehuset</li><li data-i18n="gb2">Udendørs bruser ved poolen</li><li data-i18n="gb3">Hårtørrer</li><li data-i18n="gb4">Varmt vand fra geotermisk energi</li></ul></div><div><h3 data-i18n="gk_h">Køkken og spisning</h3><ul><li data-i18n="gk1">Køkken med stor køkkenø</li><li data-i18n="gk2">Ovn, kogeplade, opvaskemaskine, køleskab og fryser</li><li data-i18n="gk3">Espressomaskine og stempelkande</li><li data-i18n="gk4">Blender, bageplader, vinglas</li><li data-i18n="gk5">Spisebord i eg til otte</li><li data-i18n="gk6">Høj stol efter ønske</li></ul></div><div><h3 data-i18n="gv_h">Ophold</h3><ul><li data-i18n="gv1">Stue med sofaer og læsehjørne</li><li data-i18n="gv2">En væg fuld af bøger</li><li data-i18n="gv3">Tv og musikanlæg</li><li data-i18n="gv4">Wi-Fi i hele huset</li><li data-i18n="gv5">Yogamåtte</li></ul></div><div><h3 data-i18n="go_h">Udenfor</h3><ul><li data-i18n="go1">Privat saltvandspool, opvarmet med varmepumpe</li><li data-i18n="go2">Liggestole og parasoller</li><li data-i18n="go3">Stenterrasser i flere niveauer</li><li data-i18n="go4">Langt bord til at spise udenfor</li><li data-i18n="go5">Overdækket loggia med gasgrill</li><li data-i18n="go6">Gæstehusets terrasse under en vinpergola</li><li data-i18n="go7">Have og græsplæne (ikke indhegnet)</li></ul></div><div><h3 data-i18n="gp_h">Praktisk</h3><ul><li data-i18n="gp1">Vaskemaskine, strygejern, tørrestativ</li><li data-i18n="gp2">Centralvarme (geotermisk)</li><li data-i18n="gp3">Røg- og kulilte-alarmer, brandslukker, førstehjælpskasse</li><li data-i18n="gp4">Gratis parkering ved huset og på landsbytorvet</li><li data-i18n="gp5">Selv-indtjekning, detaljer fra vores team hos Convivum</li><li class="no" data-i18n="gp6">Ingen aircondition: tykke stenmure og ventilatorer holder det køligt</li><li class="no" data-i18n="gp7">Ingen tørretumbler</li><li class="no" data-i18n="gp8">Ingen overvågningskameraer</li></ul></div><div><h3 data-i18n="gr_h">Jeres ophold</h3><ul><li data-i18n="gr1">Indtjekning fra kl. 16, udtjekning senest kl. 10</li><li data-i18n="gr2">Sæson: 25. marts – 31. oktober</li><li data-i18n="gr3">Mindst 4 nætter, 7 i juli og august</li><li data-i18n="gr4">Op til 7 gæster, hele ejendommen er jeres</li><li data-i18n="gr5">Op til 2 hunde, 75 € pr. ophold</li><li data-i18n="gr6">Registrering (CIN): IT050027C25RW27RMD</li></ul></div><div><h3 data-i18n="gd_h">Vores guides</h3><ul><li data-i18n="gd1">Restaurant La Rocca: 1 minut til fods</li><li data-i18n="gd2">Supermarked i Pomarance: 15 minutter</li><li data-i18n="gd3">Volterra: 30 minutter</li><li data-i18n="gd4">Kysten ved Cecina: 45 minutter</li><li data-i18n="gd5">Siena: 1 t 15</li><li data-i18n="gd6">Pisa lufthavn: 1 t 20 · Firenze: 1 t 30</li></ul></div></div>
-    <div class="gl-foot"><a class="btn" href="#request" data-close data-i18n="nav_book">Forespørg</a><a class="ghost" href="#photos" data-i18n="btn_photos">Se alle 41 fotos</a></div>
+    <div class="gl-foot"><a class="btn" href="#request" data-close data-i18n="nav_book">Forespørg</a><a class="ghost" href="#photos" data-i18n="btn_photos">Fotogalleri</a></div>
   </div></div>
 </div>
 
