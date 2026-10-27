@@ -11,6 +11,18 @@
   "nl": {
    "path": "/nl/gids/thermale-bronnen-toscane/",
    "h1": "Thermale bronnen in Toscane bij Volterra"
+  },
+  "it": {
+   "path": "/it/guida/terme-vicino-volterra/",
+   "h1": "Terme vicino a Volterra"
+  },
+  "da": {
+   "path": "/da/guide/termiske-kilder-toscana/",
+   "h1": "Termiske kilder nær Volterra"
+  },
+  "fr": {
+   "path": "/fr/guide/sources-thermales-toscane/",
+   "h1": "Sources thermales près de Volterra"
   }
  },
  "dog": {
@@ -25,6 +37,18 @@
   "nl": {
    "path": "/nl/gids/vakantiehuis-toscane-met-hond/",
    "h1": "Vakantiehuis in Toscane met je hond"
+  },
+  "it": {
+   "path": "/it/guida/casa-vacanze-toscana-con-cane/",
+   "h1": "Una casa vacanze in Toscana con il tuo cane"
+  },
+  "da": {
+   "path": "/da/guide/feriehus-toscana-med-hund/",
+   "h1": "Et feriehus i Toscana med din hund"
+  },
+  "fr": {
+   "path": "/fr/guide/maison-vacances-toscane-avec-chien/",
+   "h1": "Une maison de vacances en Toscane avec votre chien"
   }
  },
  "volterra": {
@@ -39,6 +63,18 @@
   "nl": {
    "path": "/nl/gids/volterra-en-val-di-cecina/",
    "h1": "Volterra en de Val di Cecina"
+  },
+  "it": {
+   "path": "/it/guida/volterra-e-val-di-cecina/",
+   "h1": "Volterra e la Val di Cecina"
+  },
+  "da": {
+   "path": "/da/guide/volterra-og-val-di-cecina/",
+   "h1": "Volterra og Val di Cecina"
+  },
+  "fr": {
+   "path": "/fr/guide/volterra-et-val-di-cecina/",
+   "h1": "Volterra et le Val di Cecina"
   }
  }
 }

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Builds the guide pages (EN/DE/NL) from scripts/guides_content.py and writes scripts/guides.json
+"""Builds the guide pages (EN/DE/NL/IT/DA/FR) from scripts/guides_content.py and writes scripts/guides.json
 (used by build_langs.js for the sitemap and by the homepage links). Run: python3 scripts/build_guides.py"""
 import json, os, re, html, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, 'scripts'))
 from guides_content import GUIDES, UI
-LANGS = ['en', 'de', 'nl']
-HREFLANG = {'en': 'en', 'de': 'de', 'nl': 'nl'}
+LANGS = ['en', 'de', 'nl', 'it', 'da', 'fr']
+HREFLANG = {l: l for l in LANGS}
 BASE = 'https://casalafonte.it/'
 esc = lambda s: html.escape(s, quote=True)
 CSS = """:root{--paper:#f5eee3;--paper-2:#ece2d2;--ink:#2e2721;--muted:#6f6357;--soft:#a08f7c;--rule:#e2d6c4;--sage:#5e6a55;--sage-ink:#fff;--sun:#b5703f;
@@ -42,7 +42,7 @@ h1{font-size:clamp(2.4rem,5.4vw,3.8rem);font-weight:300;margin:.3rem 0 1rem}
 @media (max-width:760px){.cta{grid-template-columns:1fr}}
 .more{margin-top:clamp(36px,5vw,56px)}.more h2{font-size:1.5rem;margin-bottom:.8rem}.more ul{list-style:none;margin:0;padding:0;display:grid;gap:.4rem}
 footer{border-top:1px solid var(--rule);padding-block:2.4rem 3rem;font-size:.85rem;color:var(--muted)}footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem 2rem}"""
-LINKWORDS = {'en': 'thermal springs guide', 'de': 'Ratgeber zu den Thermalquellen', 'nl': 'gids over de thermale bronnen'}
+LINKWORDS = {'en': 'thermal springs guide', 'de': 'Ratgeber zu den Thermalquellen', 'nl': 'gids over de thermale bronnen', 'it': 'guida alle terme', 'da': 'guide til de termiske kilder', 'fr': 'guide des sources thermales'}
 
 def url(g, l): return BASE + GUIDES[g]['slug'][l] + '/'
 def page(g, l):

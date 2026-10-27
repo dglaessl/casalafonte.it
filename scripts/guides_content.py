@@ -147,3 +147,197 @@ UI = {
  "de":{"home":"/de/","house":"Das Haus","photos":"Fotos","area":"Die Gegend","prices":"Preise","book":"Anfragen","cta_h":"Bei uns wohnen","cta_p":"Die Casa La Fonte ist ein 400 Jahre altes Bauernhaus aus Stein mit Gästehaus und privatem beheiztem Salzwasserpool in San Dalmazio, für bis zu sieben Gäste. Hunde sind willkommen.","cta_a":"Preise und freie Termine","cta_b":"Alle 42 Fotos ansehen","more":"Weitere Ratgeber","by":"Von Daniel & Eva, Eigentümer der Casa La Fonte","times":"Fahrzeiten ungefähr, ab dem Haus in San Dalmazio.","ft":"Casa La Fonte · 56045 San Dalmazio (PI), Italia"},
  "nl":{"home":"/nl/","house":"Het huis","photos":"Foto's","area":"De omgeving","prices":"Prijzen","book":"Data aanvragen","cta_h":"Logeer bij ons","cta_p":"Casa La Fonte is een 400 jaar oude stenen boerderij met gastenverblijf en eigen verwarmd zoutwaterzwembad in San Dalmazio, voor maximaal zeven gasten. Honden zijn welkom.","cta_a":"Prijzen en beschikbaarheid","cta_b":"Bekijk alle 42 foto's","more":"Meer gidsen","by":"Door Daniel & Eva, eigenaren van Casa La Fonte","times":"Rijtijden bij benadering, vanaf het huis in San Dalmazio.","ft":"Casa La Fonte · 56045 San Dalmazio (PI), Italia"},
 }
+
+# ---- Italian, Danish and French (added 27 Oct 2026) ----
+GUIDES['thermal']['slug'].update({'it': 'it/guida/terme-vicino-volterra', 'da': 'da/guide/termiske-kilder-toscana', 'fr': 'fr/guide/sources-thermales-toscane'})
+GUIDES['dog']['slug'].update({'it': 'it/guida/casa-vacanze-toscana-con-cane', 'da': 'da/guide/feriehus-toscana-med-hund', 'fr': 'fr/guide/maison-vacances-toscane-avec-chien'})
+GUIDES['volterra']['slug'].update({'it': 'it/guida/volterra-e-val-di-cecina', 'da': 'da/guide/volterra-og-val-di-cecina', 'fr': 'fr/guide/volterra-et-val-di-cecina'})
+GUIDES['thermal']['img_alt'].update({'it': 'La terrazza della piscina di Casa La Fonte con vista sulle colline', 'da': 'Poolterrassen på Casa La Fonte med udsigt over bakkerne', 'fr': 'La terrasse de la piscine de Casa La Fonte face aux collines'})
+GUIDES['dog']['img_alt'].update({'it': 'Il prato e la piscina di Casa La Fonte', 'da': 'Plænen og poolen på Casa La Fonte', 'fr': 'La pelouse et la piscine de Casa La Fonte'})
+GUIDES['volterra']['img_alt'].update({'it': 'Il campanile di San Dalmazio sopra la valle', 'da': 'Klokketårnet i San Dalmazio over dalen', 'fr': 'Le clocher de San Dalmazio au-dessus de la vallée'})
+
+GUIDES['thermal']['it'] = {
+ "title": "Terme vicino a Volterra: le nostre preferite | Casa La Fonte",
+ "desc": "Sorgenti termali libere e terme a meno di un'ora da San Dalmazio e Volterra: Sasso Pisano, le Biancane, La Cerreta, Calidario e Bagni di Petriolo, con i consigli dei proprietari di Casa La Fonte.",
+ "label": "Guida",
+ "h1": "Terme vicino a Volterra",
+ "lede": "La Val di Cecina si trova su uno dei campi geotermici più attivi d'Europa. Il vapore sale dalle colline intorno a Larderello e l'acqua calda sgorga dalla terra in luoghi che conoscevano già gli Etruschi. Queste sono le sorgenti che consigliamo agli ospiti che soggiornano da noi a San Dalmazio.",
+ "sections": [
+  ["Sasso Pisano · gratis · circa 30 minuti", "Un piccolo borgo di sorgenti fumanti nel comune di Castelnuovo di Val di Cecina. Vicino al cimitero l'acqua a circa 36 °C scorre in un vecchio lavatoio, e ci sono piccole vasche naturali vicino al Bagnone, le terme etrusco-romane riportate alla luce. Le rovine e il piccolo museo accanto meritano una visita. Portate asciugamani e acqua."],
+  ["Parco delle Biancane · circa 35 minuti", "Poco dopo Sasso Pisano, a Monterotondo Marittimo, i sentieri attraversano rocce bianche, soffioni e fumarole. Nelle giornate limpide si vedono la costa e l'Elba. Si abbina perfettamente a un bagno a Sasso Pisano."],
+  ["La Cerreta a Sassetta · circa 45 minuti", "Terme tranquille in un'azienda agricola biologica sulle colline sopra la costa, con vasche da 34 a 38 °C. È il posto che il nostro team di Convivum consiglia di più. Prenotate in anticipo, soprattutto d'estate."],
+  ["Calidario a Venturina Terme · circa un'ora", "Un piccolo lago alimentato da una sorgente naturale a 36 °C, in una pineta a cinque chilometri dal mare, con spa e sauna. Facile da abbinare a una giornata sulla spiaggia di Rimigliano o di Baratti. Controllate gli orari su calidario.it."],
+  ["Bagni di Petriolo · poco più di un'ora", "Vasche calde libere a circa 40 °C lungo il fiume Farma, vicino a Monticiano. Molto frequentate: andateci la mattina presto oppure evitate i fine settimana d'estate."]
+ ],
+ "tips_h": "I nostri consigli",
+ "tips": [
+  "Andate presto la mattina o verso sera: l'acqua è la stessa, la folla no.",
+  "Lasciate a casa i gioielli d'argento: l'acqua sulfurea li annerisce.",
+  "Le scarpette da scoglio aiutano nelle vasche naturali.",
+  "Dopo una giornata alle terme, la casa è un bel posto in cui tornare: la piscina riscaldata di acqua salata e l'energia geotermica che riscalda la casa e l'acqua calda."
+ ]
+}
+GUIDES['thermal']['da'] = {
+ "title": "Termiske kilder nær Volterra: vores favoritter | Casa La Fonte",
+ "desc": "Gratis varme kilder og termiske spaer under en times kørsel fra San Dalmazio og Volterra: Sasso Pisano, Biancane, La Cerreta, Calidario og Bagni di Petriolo, med tips fra ejerne af Casa La Fonte.",
+ "label": "Guide",
+ "h1": "Termiske kilder nær Volterra",
+ "lede": "Val di Cecina ligger på et af Europas mest aktive geotermiske felter. Damp stiger op fra bakkerne omkring Larderello, og varmt vand kommer op af jorden på steder, som etruskerne allerede kendte. Det er de kilder, vi anbefaler til gæster, der bor hos os i San Dalmazio.",
+ "sections": [
+  ["Sasso Pisano · gratis · ca. 30 minutter", "En lille landsby med dampende kilder i kommunen Castelnuovo di Val di Cecina. Ved kirkegården løber vand på ca. 36 °C ud i et gammelt vaskehus, og der er små naturlige bassiner ved Il Bagnone, de udgravede etruskisk-romerske bade. Ruinerne og det lille museum ved siden af er et besøg værd. Tag håndklæder og vand med."],
+  ["Parco delle Biancane · ca. 35 minutter", "Lige efter Sasso Pisano, ved Monterotondo Marittimo, fører vandrestier gennem hvide klipper, damphuller og fumaroler. På klare dage kan man se kysten og Elba. Det passer perfekt sammen med en dukkert i Sasso Pisano."],
+  ["La Cerreta ved Sassetta · ca. 45 minutter", "Et roligt termisk spa på en økologisk gård i bakkerne over kysten, med bassiner fra 34 til 38 °C. Det er det sted, vores team fra Convivum anbefaler mest. Book i god tid, især om sommeren."],
+  ["Calidario ved Venturina Terme · ca. en time", "En lille sø fødet af en naturlig kilde på 36 °C, i en pinjeskov fem kilometer fra havet, med spa og sauna. Nem at kombinere med en dag på stranden ved Rimigliano eller Baratti. Tjek åbningstiderne på calidario.it."],
+  ["Bagni di Petriolo · lidt over en time", "Gratis varme bassiner på ca. 40 °C ved floden Farma nær Monticiano. Populært, så tag af sted tidligt om morgenen, eller undgå sommerweekenderne."]
+ ],
+ "tips_h": "Vores tips",
+ "tips": [
+  "Tag af sted tidligt eller sent på dagen: vandet er det samme, men der er færre mennesker.",
+  "Lad sølvsmykker blive hjemme; svovlvandet gør dem mørke.",
+  "Badesko er en hjælp i de stenede naturlige bassiner.",
+  "Efter en dag i de varme kilder er huset et dejligt sted at komme hjem til: den opvarmede saltvandspool og geotermisk energi, der varmer huset og det varme vand."
+ ]
+}
+GUIDES['thermal']['fr'] = {
+ "title": "Sources thermales près de Volterra : nos préférées | Casa La Fonte",
+ "desc": "Sources chaudes gratuites et thermes à moins d'une heure de San Dalmazio et de Volterra : Sasso Pisano, les Biancane, La Cerreta, Calidario et Bagni di Petriolo, avec les conseils des propriétaires de Casa La Fonte.",
+ "label": "Guide",
+ "h1": "Sources thermales près de Volterra",
+ "lede": "Le Val di Cecina repose sur l'un des champs géothermiques les plus actifs d'Europe. La vapeur s'élève des collines autour de Larderello, et l'eau chaude jaillit du sol en des lieux que connaissaient déjà les Étrusques. Voici les sources que nous recommandons à nos hôtes à San Dalmazio.",
+ "sections": [
+  ["Sasso Pisano · gratuit · environ 30 minutes", "Un petit village de sources fumantes sur la commune de Castelnuovo di Val di Cecina. Près du cimetière, une eau à environ 36 °C coule dans un ancien lavoir, et de petits bassins naturels se trouvent près d'Il Bagnone, les thermes étrusco-romains mis au jour. Les ruines et le petit musée voisin valent le détour. Prévoyez serviettes et eau."],
+  ["Parco delle Biancane · environ 35 minutes", "Juste après Sasso Pisano, à Monterotondo Marittimo, des sentiers traversent roches blanches, évents de vapeur et fumerolles. Par temps clair, on aperçoit la côte et l'île d'Elbe. Parfait à combiner avec une baignade à Sasso Pisano."],
+  ["La Cerreta à Sassetta · environ 45 minutes", "Des thermes paisibles dans une ferme biologique sur les collines au-dessus de la côte, avec des bassins de 34 à 38 °C. C'est l'adresse que notre équipe de Convivum recommande le plus. Réservez à l'avance, surtout en été."],
+  ["Calidario à Venturina Terme · environ une heure", "Un petit lac alimenté par une source naturelle à 36 °C, dans une pinède à cinq kilomètres de la mer, avec spa et sauna. Facile à combiner avec une journée sur la plage de Rimigliano ou de Baratti. Vérifiez les horaires sur calidario.it."],
+  ["Bagni di Petriolo · un peu plus d'une heure", "Des bassins chauds gratuits à environ 40 °C au bord de la Farma, près de Monticiano. Très fréquentés : venez tôt le matin ou évitez les week-ends d'été."]
+ ],
+ "tips_h": "Nos conseils",
+ "tips": [
+  "Venez tôt le matin ou en fin de journée : l'eau est la même, la foule non.",
+  "Laissez vos bijoux en argent à la maison ; l'eau soufrée les noircit.",
+  "Des chaussons d'eau sont utiles dans les bassins naturels rocheux.",
+  "Après une journée aux sources chaudes, il fait bon rentrer à la maison : la piscine chauffée à l'eau salée, et l'énergie géothermique qui chauffe la maison et l'eau chaude."
+ ]
+}
+
+GUIDES['dog']['it'] = {
+ "title": "Casa vacanze in Toscana con il cane | Casa La Fonte",
+ "desc": "Casa La Fonte a San Dalmazio accoglie fino a due cani: un casale privato con giardino e piscina riscaldata, passeggiate dalla porta di casa, spiagge per cani a meno di un'ora e consigli pratici.",
+ "label": "Guida",
+ "h1": "Una casa vacanze in Toscana con il tuo cane",
+ "lede": "A Casa La Fonte fino a due cani sono i benvenuti. L'intera proprietà è vostra, le stradine intorno al borgo sono tranquille e le colline iniziano davanti alla porta. Ecco cosa sapere prima di partire.",
+ "sections": [
+  ["In casa", "La casa principale, la dépendance, le terrazze, il prato e la piscina sono solo per voi; nessun altro alloggia nella proprietà. Il supplemento per gli animali è di 75 € a soggiorno, qualunque sia la durata: basta aggiungere il cane nel modulo di richiesta e raccontarci un po' di lui. Il giardino non è recintato e dietro il prato c'è un dislivello ripido, quindi tenete d'occhio il cane in quella zona."],
+  ["Passeggiate da casa", "I sentieri partono dal borgo e salgono alla Rocca Sillana, attraverso boschi di querce e campi. Il traffico sulle stradine è scarso. D'estate camminate la mattina presto e la sera, e tenete le ore centrali per l'ombra della loggia."],
+  ["Spiagge con il cane", "La Costa degli Etruschi è a 45–60 minuti. A Cecina e San Vincenzo ci sono tratti di spiaggia e stabilimenti che accettano i cani. In Toscana i cani possono accedere al guinzaglio a tutti i luoghi pubblici all'aperto, spiagge comprese, nel rispetto delle regole locali, che possono cambiare a seconda della stagione: informatevi prima di andare. Portate acqua e ombra."],
+  ["Mangiare fuori", "Molte trattorie della zona accolgono volentieri un cane educato in terrazza. È sempre gentile chiedere prima."]
+ ],
+ "tips_h": "Prima di partire",
+ "tips": [
+  "All'interno dell'UE il cane deve avere il passaporto per animali e una vaccinazione antirabbica valida.",
+  "Portate la cuccia e le ciotole del cane; al momento della prenotazione vi diciamo dov'è il veterinario più vicino.",
+  "Luglio e agosto sono caldi: programmate le uscite nelle ore più fresche. I muri spessi di pietra mantengono la casa piacevole."
+ ]
+}
+GUIDES['dog']['da'] = {
+ "title": "Feriehus i Toscana med hund | Casa La Fonte",
+ "desc": "Casa La Fonte i San Dalmazio byder op til to hunde velkommen: et privat stuehus med have og opvarmet pool, gåture fra døren, hundevenlige strande under en time væk og praktiske tips.",
+ "label": "Guide",
+ "h1": "Et feriehus i Toscana med din hund",
+ "lede": "På Casa La Fonte er op til to hunde meget velkomne. Hele ejendommen er jeres, vejene omkring landsbyen er stille, og bakkerne begynder lige uden for døren. Her er, hvad I skal vide, før I kommer.",
+ "sections": [
+  ["I huset", "I har hovedhuset, gæstehuset, terrasserne, plænen og poolen for jer selv; ingen andre bor på ejendommen. Gebyret for kæledyr er 75 € pr. ophold, uanset længden; tilføj bare jeres hund i forespørgselsformularen, og fortæl os lidt om den. Bemærk, at haven ikke er indhegnet, og at der er et stejlt fald bag plænen, så hold øje med hunden der."],
+  ["Gåture fra døren", "Stier starter i landsbyen og fører op til fæstningen Rocca Sillana og gennem egeskove og marker. Der er kun lidt trafik på vejene. Om sommeren går man tidligt om morgenen og om aftenen og holder midt på dagen i skyggen af loggiaen."],
+  ["Strande med hund", "Den etruskiske kyst ligger 45 til 60 minutter væk. I Cecina og San Vincenzo er der strandstykker og strandklubber, der tager imod hunde. I Toscana må hunde i snor færdes på offentlige udendørs områder, også strande, efter de lokale regler, som kan ændre sig med sæsonen, så tjek dem, før I tager af sted. Tag vand og skygge med."],
+  ["At spise ude", "Mange trattoriaer i området tager gerne imod en velopdragen hund på terrassen. Det er altid høfligt at spørge først."]
+ ],
+ "tips_h": "Før I rejser",
+ "tips": [
+  "Inden for EU skal hunden have et EU-kæledyrspas og en gyldig rabiesvaccination.",
+  "Tag hundens seng og skåle med; vi fortæller jer, hvor den nærmeste dyrlæge er, når I booker.",
+  "Juli og august er varme: planlæg udflugter til de køligere timer. De tykke stenmure holder huset behageligt."
+ ]
+}
+GUIDES['dog']['fr'] = {
+ "title": "Maison de vacances en Toscane avec votre chien | Casa La Fonte",
+ "desc": "Casa La Fonte à San Dalmazio accueille jusqu'à deux chiens : une ferme privée avec jardin et piscine chauffée, des balades depuis la porte, des plages pour chiens à moins d'une heure et des conseils pratiques.",
+ "label": "Guide",
+ "h1": "Une maison de vacances en Toscane avec votre chien",
+ "lede": "À Casa La Fonte, jusqu'à deux chiens sont les bienvenus. Toute la propriété est à vous, les petites routes autour du village sont calmes et les collines commencent devant la porte. Voici ce qu'il faut savoir avant de venir.",
+ "sections": [
+  ["À la maison", "La maison principale, la maison d'amis, les terrasses, la pelouse et la piscine sont rien que pour vous ; personne d'autre ne séjourne sur la propriété. Le supplément animaux est de 75 € par séjour, quelle qu'en soit la durée : ajoutez simplement votre chien dans le formulaire de demande et parlez-nous un peu de lui. Le jardin n'est pas clôturé et il y a un dénivelé abrupt derrière la pelouse : gardez un œil sur votre chien à cet endroit."],
+  ["Balades depuis la porte", "Des sentiers partent du village et montent vers la forteresse de la Rocca Sillana, à travers bois de chênes et champs. Il y a peu de circulation sur les petites routes. En été, promenez-vous tôt le matin et le soir, et gardez le milieu de la journée pour l'ombre de la loggia."],
+  ["Plages avec chien", "La Côte étrusque est à 45 à 60 minutes. À Cecina et San Vincenzo, certaines portions de plage et certains établissements de plage acceptent les chiens. En Toscane, les chiens tenus en laisse sont admis dans les espaces publics extérieurs, plages comprises, selon les règles locales, qui peuvent changer selon la saison : renseignez-vous avant d'y aller. Prévoyez de l'eau et de l'ombre."],
+  ["Au restaurant", "Beaucoup de trattorias de la région accueillent volontiers un chien sage en terrasse. Il est toujours poli de demander d'abord."]
+ ],
+ "tips_h": "Avant le départ",
+ "tips": [
+  "Dans l'UE, votre chien a besoin d'un passeport pour animal de compagnie et d'une vaccination antirabique valide.",
+  "Apportez le panier et les gamelles de votre chien ; nous vous indiquerons le vétérinaire le plus proche lors de la réservation.",
+  "Juillet et août sont chauds : prévoyez les sorties aux heures les plus fraîches. Les épais murs de pierre gardent la maison agréable."
+ ]
+}
+
+GUIDES['volterra']['it'] = {
+ "title": "Volterra e la Val di Cecina: una guida locale | Casa La Fonte",
+ "desc": "Cosa vedere intorno a Volterra e San Dalmazio: la Volterra etrusca, la valle geotermica di Larderello, i borghi collinari, ristoranti e gite in giornata, dai proprietari di Casa La Fonte.",
+ "label": "Guida",
+ "h1": "Volterra e la Val di Cecina",
+ "lede": "San Dalmazio si trova in Val di Cecina, tra Volterra e il mare, in uno degli angoli più tranquilli della Toscana. Pochi pullman turistici passano di qui. Questi sono i posti che amiamo, con i tempi di percorrenza da casa.",
+ "sections": [
+  ["Volterra · 30 minuti", "Le mura etrusche e la Porta all'Arco, il teatro romano, la collezione etrusca del Museo Guarnacci, le botteghe dell'alabastro e Piazza dei Priori, una delle piazze più belle d'Italia. Fermatevi per un aperitivo quando i visitatori di giornata se ne sono andati."],
+  ["La valle geotermica · 15–30 minuti", "Larderello, culla dell'energia geotermica, con il suo museo; i sentieri fumanti delle Biancane; e le sorgenti calde di Sasso Pisano. La stessa energia riscalda Casa La Fonte. Tutti i dettagli sono nella nostra guida alle terme."],
+  ["Borghi vicini · 10–15 minuti", "Montecastelli Pisano per i suoi vicoli in cima alla collina e il CI.RI.SO; Pomarance per la spesa e La Dispensa. A San Dalmazio, il ristorante di famiglia La Rocca di Stefano è a un minuto a piedi da casa, e il sentiero per la Rocca Sillana parte dal borgo."],
+  ["Gite in giornata · circa un'ora", "San Gimignano e Siena; Massa Marittima con la sua piazza del Duomo; Bolgheri, il suo viale dei cipressi e le sue cantine, e le spiagge della Costa degli Etruschi. Pisa e Firenze si combinano bene con il giorno di arrivo o di partenza."]
+ ],
+ "tips_h": "Da sapere",
+ "tips": [
+  "L'auto è indispensabile. Le strade sono tortuose: calcolate un po' più di tempo di quanto dica la mappa.",
+  "Visitate Volterra e San Gimignano la mattina presto o verso sera.",
+  "Prenotate con largo anticipo i ristoranti stellati Michelin della zona."
+ ]
+}
+GUIDES['volterra']['da'] = {
+ "title": "Volterra og Val di Cecina: en lokal guide | Casa La Fonte",
+ "desc": "Hvad man skal se omkring Volterra og San Dalmazio: det etruskiske Volterra, den geotermiske dal ved Larderello, bjerglandsbyer, restauranter og dagsture, fra ejerne af Casa La Fonte.",
+ "label": "Guide",
+ "h1": "Volterra og Val di Cecina",
+ "lede": "San Dalmazio ligger i Val di Cecina, mellem Volterra og havet, i et af de mere stille hjørner af Toscana. Få turistbusser kommer denne vej. Det er de steder, vi holder af, med køretider fra huset.",
+ "sections": [
+  ["Volterra · 30 minutter", "Etruskiske bymure og Porta all'Arco, et romersk teater, den etruskiske samling på Guarnacci-museet, alabastværksteder og Piazza dei Priori, en af Italiens smukkeste pladser. Bliv til en aperitivo, når dagsturisterne er taget hjem."],
+  ["Den geotermiske dal · 15–30 minutter", "Larderello, geotermisk energis fødested, med sit museum; de dampende stier i Biancane; og de varme kilder i Sasso Pisano. Den samme energi varmer Casa La Fonte. Vores guide til de termiske kilder har detaljerne."],
+  ["Landsbyer tæt på · 10–15 minutter", "Montecastelli Pisano for sine stræder på bakketoppen og CI.RI.SO; Pomarance for indkøb og La Dispensa. I selve San Dalmazio ligger Stefanos familierestaurant La Rocca et minuts gang fra huset, og stien op til Rocca Sillana starter i landsbyen."],
+  ["Dagsture · ca. en time", "San Gimignano og Siena; Massa Marittima med sin domkirkeplads; Bolgheri, dens cypresallé og vingårde, og strandene på den etruskiske kyst. Pisa og Firenze passer godt ind på ankomst- eller afrejsedagen."]
+ ],
+ "tips_h": "Godt at vide",
+ "tips": [
+  "En bil er nødvendig. Vejene snor sig, så beregn lidt mere tid, end kortet siger.",
+  "Besøg Volterra og San Gimignano tidligt om morgenen eller sent på dagen.",
+  "Book områdets Michelin-restauranter i god tid."
+ ]
+}
+GUIDES['volterra']['fr'] = {
+ "title": "Volterra et le Val di Cecina : un guide local | Casa La Fonte",
+ "desc": "Que voir autour de Volterra et de San Dalmazio : la Volterra étrusque, la vallée géothermique de Larderello, les villages perchés, des restaurants et des excursions, par les propriétaires de Casa La Fonte.",
+ "label": "Guide",
+ "h1": "Volterra et le Val di Cecina",
+ "lede": "San Dalmazio se trouve dans le Val di Cecina, entre Volterra et la mer, dans l'un des coins les plus tranquilles de la Toscane. Peu de cars de touristes passent par ici. Voici les lieux que nous aimons, avec les temps de trajet depuis la maison.",
+ "sections": [
+  ["Volterra · 30 minutes", "Les remparts étrusques et la Porta all'Arco, un théâtre romain, la collection étrusque du musée Guarnacci, les ateliers d'albâtre et la Piazza dei Priori, l'une des plus belles places d'Italie. Restez pour un aperitivo quand les visiteurs de la journée sont partis."],
+  ["La vallée géothermique · 15–30 minutes", "Larderello, berceau de l'énergie géothermique, et son musée ; les sentiers fumants des Biancane ; et les sources chaudes de Sasso Pisano. La même énergie chauffe Casa La Fonte. Notre guide des sources thermales donne tous les détails."],
+  ["Villages voisins · 10–15 minutes", "Montecastelli Pisano pour ses ruelles perchées et le CI.RI.SO ; Pomarance pour les courses et La Dispensa. À San Dalmazio même, La Rocca, le restaurant familial de Stefano, est à une minute à pied de la maison, et le sentier vers la Rocca Sillana part du village."],
+  ["Excursions · environ une heure", "San Gimignano et Sienne ; Massa Marittima et sa place de la cathédrale ; Bolgheri, son allée de cyprès et ses domaines viticoles, et les plages de la Côte étrusque. Pise et Florence s'intègrent bien au jour d'arrivée ou de départ."]
+ ],
+ "tips_h": "Bon à savoir",
+ "tips": [
+  "Une voiture est indispensable. Les routes sont sinueuses : prévoyez un peu plus de temps que ce qu'indique la carte.",
+  "Visitez Volterra et San Gimignano tôt le matin ou en fin de journée.",
+  "Réservez bien à l'avance les restaurants étoilés Michelin de la région."
+ ]
+}
+
+UI.update({
+ "it":{"home":"/it/","house":"La casa","photos":"Foto","area":"Il territorio","prices":"Prezzi","book":"Richiedi date","cta_h":"Soggiorna da noi","cta_p":"Casa La Fonte è un casale in pietra di 400 anni con dépendance e piscina privata riscaldata di acqua salata a San Dalmazio, per un massimo di sette ospiti. I cani sono i benvenuti.","cta_a":"Prezzi e disponibilità","cta_b":"Guarda tutte le 42 foto","more":"Altre guide","by":"Di Daniel ed Eva, proprietari di Casa La Fonte","times":"Tempi di percorrenza indicativi, dalla casa a San Dalmazio.","ft":"Casa La Fonte · 56045 San Dalmazio (PI), Italia"},
+ "da":{"home":"/da/","house":"Huset","photos":"Fotos","area":"Området","prices":"Priser","book":"Forespørg","cta_h":"Bo hos os","cta_p":"Casa La Fonte er et 400 år gammelt stuehus af sten med gæstehus og privat opvarmet saltvandspool i San Dalmazio, til op til syv gæster. Hunde er velkomne.","cta_a":"Se priser og ledige datoer","cta_b":"Se alle 42 fotos","more":"Flere guides","by":"Af Daniel og Eva, ejere af Casa La Fonte","times":"Køretiderne er omtrentlige, fra huset i San Dalmazio.","ft":"Casa La Fonte · 56045 San Dalmazio (PI), Italia"},
+ "fr":{"home":"/fr/","house":"La maison","photos":"Photos","area":"La région","prices":"Tarifs","book":"Demander vos dates","cta_h":"Séjournez chez nous","cta_p":"Casa La Fonte est une ferme en pierre de 400 ans avec maison d'amis et piscine privée chauffée à l'eau salée à San Dalmazio, pour sept personnes au maximum. Les chiens sont les bienvenus.","cta_a":"Tarifs et disponibilités","cta_b":"Voir les 42 photos","more":"Autres guides","by":"Par Daniel et Eva, propriétaires de Casa La Fonte","times":"Temps de trajet indicatifs, depuis la maison à San Dalmazio.","ft":"Casa La Fonte · 56045 San Dalmazio (PI), Italia"},
+})
