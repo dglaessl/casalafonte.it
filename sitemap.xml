@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://casalafonte.it/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://casalafonte.it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://casalafonte.it/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://casalafonte.it/it/"/>
@@ -10,10 +10,57 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://casalafonte.it/da/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://casalafonte.it/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://casalafonte.it/"/>
+    <image:image><image:loc>https://casalafonte.it/img/house-pool.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/terrace-view.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/house-lawn.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/loggia.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/daniel-eva.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/02.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/03.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/04.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/01.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/05.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/06.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/07.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/08.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/09.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/11.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/12.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/10.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/13.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/20.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/19.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/14.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/15.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/17.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/18.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/16.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/21.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/22.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/23.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/24.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/26.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/27.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/28.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/29.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/30.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/25.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/35.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/31.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/34.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/36.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/37.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/38.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/32.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/33.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/39.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/40.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/41.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/42.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://casalafonte.it/de/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://casalafonte.it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://casalafonte.it/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://casalafonte.it/it/"/>
@@ -21,10 +68,57 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://casalafonte.it/da/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://casalafonte.it/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://casalafonte.it/"/>
+    <image:image><image:loc>https://casalafonte.it/img/house-pool.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/terrace-view.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/house-lawn.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/loggia.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/daniel-eva.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/02.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/03.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/04.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/01.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/05.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/06.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/07.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/08.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/09.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/11.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/12.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/10.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/13.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/20.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/19.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/14.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/15.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/17.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/18.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/16.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/21.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/22.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/23.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/24.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/26.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/27.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/28.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/29.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/30.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/25.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/35.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/31.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/34.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/36.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/37.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/38.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/32.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/33.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/39.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/40.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/41.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/42.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://casalafonte.it/it/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://casalafonte.it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://casalafonte.it/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://casalafonte.it/it/"/>
@@ -32,10 +126,57 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://casalafonte.it/da/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://casalafonte.it/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://casalafonte.it/"/>
+    <image:image><image:loc>https://casalafonte.it/img/house-pool.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/terrace-view.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/house-lawn.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/loggia.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/daniel-eva.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/02.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/03.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/04.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/01.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/05.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/06.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/07.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/08.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/09.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/11.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/12.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/10.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/13.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/20.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/19.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/14.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/15.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/17.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/18.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/16.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/21.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/22.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/23.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/24.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/26.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/27.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/28.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/29.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/30.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/25.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/35.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/31.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/34.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/36.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/37.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/38.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/32.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/33.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/39.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/40.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/41.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/42.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://casalafonte.it/nl/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://casalafonte.it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://casalafonte.it/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://casalafonte.it/it/"/>
@@ -43,10 +184,57 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://casalafonte.it/da/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://casalafonte.it/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://casalafonte.it/"/>
+    <image:image><image:loc>https://casalafonte.it/img/house-pool.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/terrace-view.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/house-lawn.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/loggia.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/daniel-eva.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/02.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/03.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/04.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/01.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/05.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/06.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/07.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/08.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/09.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/11.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/12.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/10.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/13.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/20.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/19.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/14.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/15.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/17.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/18.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/16.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/21.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/22.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/23.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/24.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/26.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/27.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/28.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/29.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/30.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/25.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/35.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/31.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/34.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/36.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/37.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/38.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/32.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/33.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/39.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/40.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/41.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/42.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://casalafonte.it/da/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://casalafonte.it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://casalafonte.it/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://casalafonte.it/it/"/>
@@ -54,10 +242,57 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://casalafonte.it/da/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://casalafonte.it/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://casalafonte.it/"/>
+    <image:image><image:loc>https://casalafonte.it/img/house-pool.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/terrace-view.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/house-lawn.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/loggia.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/daniel-eva.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/02.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/03.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/04.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/01.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/05.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/06.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/07.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/08.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/09.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/11.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/12.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/10.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/13.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/20.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/19.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/14.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/15.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/17.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/18.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/16.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/21.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/22.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/23.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/24.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/26.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/27.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/28.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/29.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/30.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/25.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/35.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/31.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/34.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/36.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/37.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/38.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/32.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/33.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/39.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/40.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/41.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/42.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://casalafonte.it/fr/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://casalafonte.it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://casalafonte.it/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://casalafonte.it/it/"/>
@@ -65,5 +300,52 @@
     <xhtml:link rel="alternate" hreflang="da" href="https://casalafonte.it/da/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://casalafonte.it/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://casalafonte.it/"/>
+    <image:image><image:loc>https://casalafonte.it/img/house-pool.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/terrace-view.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/house-lawn.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/loggia.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/daniel-eva.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/02.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/03.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/04.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/01.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/05.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/06.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/07.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/08.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/09.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/11.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/12.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/10.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/13.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/20.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/19.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/14.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/15.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/17.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/18.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/16.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/21.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/22.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/23.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/24.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/26.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/27.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/28.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/29.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/30.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/25.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/35.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/31.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/34.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/36.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/37.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/38.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/32.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/33.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/39.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/40.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/41.webp</image:loc></image:image>
+    <image:image><image:loc>https://casalafonte.it/img/g/42.webp</image:loc></image:image>
   </url>
 </urlset>

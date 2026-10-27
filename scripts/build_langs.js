@@ -48,13 +48,16 @@ for (const l of Object.keys(D)) {
 
 const langs = ['en', ...Object.keys(D)], loc = l => `https://casalafonte.it/${l === 'en' ? '' : l + '/'}`;
 const today = new Date().toISOString().slice(0, 10);
+// Images listed in the sitemap: the hero/band photos plus every gallery photo
+const IMGS = [...new Set((src.match(/(?:src|data-full)="(\/img\/[^"]+\.(?:jpg|webp))"/g) || []).map(m => m.split('"')[1]).filter(u => !/-sm\./.test(u)))];
 const sm = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${langs.map(l => `  <url>
     <loc>${loc(l)}</loc>
     <lastmod>${today}</lastmod>
 ${langs.map(k => `    <xhtml:link rel="alternate" hreflang="${k}" href="${loc(k)}"/>`).join('\n')}
     <xhtml:link rel="alternate" hreflang="x-default" href="${loc('en')}"/>
+${IMGS.map(u => `    <image:image><image:loc>https://casalafonte.it${u}</image:loc></image:image>`).join('\n')}
   </url>`).join('\n')}
 </urlset>
 `;

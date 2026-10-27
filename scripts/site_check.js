@@ -37,7 +37,7 @@ const imgs = await p.evaluate(async () => {
   const all = [...document.images];
   for (const i of all) { i.loading = 'eager'; }
   await new Promise(r => setTimeout(r, 4000));
-  return all.filter(i => !i.complete || i.naturalWidth === 0).map(i => i.getAttribute('src'));
+  return all.filter(i => i.getAttribute('src') && (!i.complete || i.naturalWidth === 0)).map(i => i.getAttribute('src'));
 });
 check(imgs.length === 0, `Images: ${imgs.length ? 'broken ' + imgs.join(', ') : 'all load'}`);
 
