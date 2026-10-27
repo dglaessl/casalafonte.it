@@ -83,7 +83,7 @@ def page(g, l):
 <style>{CSS}</style>
 </head>
 <body>
-<nav class="nav"><div class="wrap"><a class="brand" href="{home}">Casa La Fonte</a><div class="links"><a class="hide-s" href="{home}#house">{U['house']}</a><a class="hide-s" href="{home}#photos">{U['photos']}</a><a class="hide-s" href="{home}#prices">{U['prices']}</a><span class="langs">{langs}</span><a class="book" href="{home}#request">{U['book']}</a></div></div></nav>
+<nav class="nav"><div class="wrap"><a class="brand" href="{home}">Casa La Fonte</a><div class="links"><a class="hide-s" href="{home}#house">{U['house']}</a><a class="hide-s" href="{home}#photos">{U['photos']}</a><a class="hide-s" href="{home}#area">{U['area']}</a><a class="hide-s" href="{home}#prices">{U['prices']}</a><span class="langs">{langs}</span><a class="book" href="{home}#request">{U['book']}</a></div></div></nav>
 <div class="hero"><img src="{G['img']}" alt="{esc(G['img_alt'][l])}" width="1600" height="900"></div>
 <article class="wrap">
 <p class="crumbs"><a href="{home}">Casa La Fonte</a> › {esc(C['label'])}</p>

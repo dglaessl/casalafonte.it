@@ -356,6 +356,31 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
 @media (max-width:1100px){.links .hide-m{display:none}}
 body.locked{overflow:hidden}
 .guides{margin-top:clamp(36px,5vw,56px);border-top:1px solid var(--rule);padding-top:1.4rem}.guides h3{margin-bottom:.6rem}.guides ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem 2rem}.guides a{font-size:1.05rem}
+
+/* navigation v2 */
+.links a.sec[aria-current="true"]{border-bottom:1px solid currentColor}
+.links a.sec{padding-block:.2rem;border-bottom:1px solid transparent}
+.menu-btn{display:none;background:none;border:1px solid color-mix(in srgb,currentColor 45%,transparent);border-radius:999px;color:#fff;width:38px;height:34px;padding:0;cursor:pointer;align-items:center;justify-content:center}
+.nav.solid .menu-btn,.nav.open .menu-btn{color:var(--ink)}
+.bars,.bars::before,.bars::after{display:block;width:16px;height:1.5px;background:currentColor;position:relative;transition:transform .2s}
+.bars::before,.bars::after{content:"";position:absolute;left:0}.bars::before{top:-5px}.bars::after{top:5px}
+.nav.open .bars{background:transparent}.nav.open .bars::before{transform:translateY(5px) rotate(45deg)}.nav.open .bars::after{transform:translateY(-5px) rotate(-45deg)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.nav.open{background:var(--paper);border-color:var(--rule)}.nav.open .brand,.nav.open .links a,.nav.open .lang-sel{color:var(--ink)}
+.menu{border-top:1px solid var(--rule);background:var(--paper);max-height:calc(100vh - 68px);overflow:auto}
+.nav .menu .wrap{height:auto;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;padding-block:.6rem 1.4rem}
+.menu a{font-family:var(--f-display);font-size:1.35rem;color:var(--ink);text-decoration:none;padding:.55rem 0;border-bottom:1px solid var(--rule)}
+.menu-langs{display:flex;gap:.4rem;margin-top:1rem;flex-wrap:wrap}
+.menu-langs button{font-family:var(--f-ui);font-size:.8rem;font-weight:500;letter-spacing:.1em;background:none;border:1px solid var(--rule);border-radius:999px;color:var(--ink);padding:.4rem .8rem;cursor:pointer}
+.menu-langs button[aria-pressed="true"]{border-color:var(--ink)}
+@media (max-width:860px){.menu-btn{display:inline-flex}.lang-sel{display:none!important}}
+@media (min-width:861px){.menu{display:none}}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.hbtn{font-family:var(--f-ui);font-size:.85rem;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.7);border-radius:999px;padding:.55rem 1.15rem;background:rgba(40,24,12,.25);backdrop-filter:blur(4px)}
+.hbtn:hover{background:rgba(40,24,12,.45)}
+.foot-links{margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1px solid var(--rule);justify-content:flex-start!important;gap:.5rem 1.6rem!important}
+.foot-links a{color:var(--ink);text-decoration:none}.foot-links a:hover{text-decoration:underline}
+section[id]{scroll-margin-top:40px}#request{scroll-margin-top:96px}
 </style>
 </head>
 <body>
@@ -364,16 +389,29 @@ body.locked{overflow:hidden}
   <div class="wrap">
     <a class="brand" href="#top">Casa La Fonte</a>
     <div class="links">
-      <a class="hide-s" href="#house" data-i18n="nav_house">La maison</a>
+      <a class="hide-s sec" href="#house" data-i18n="nav_house">La maison</a>
       <a class="hide-s" href="#photos" data-i18n="nav_photos">Photos</a>
-      <a class="hide-s" href="#glance" data-i18n="nav_glance">En bref</a>
-      <a class="hide-s hide-m" href="#wellbeing" data-i18n="nav_well">Bien-être</a>
-      <a class="hide-s" href="#prices" data-i18n="nav_prices">Tarifs</a>
+      <a class="hide-s hide-m sec" href="#wellbeing" data-i18n="nav_well">Bien-être</a>
+      <a class="hide-s sec" href="#area" data-i18n="ar_l">La région</a>
+      <a class="hide-s sec" href="#prices" data-i18n="nav_prices">Tarifs</a>
       <div class="langs" role="group" aria-label="Language">
         <button type="button" id="l-en" data-l="en">EN</button><button type="button" id="l-de" data-l="de">DE</button><button type="button" id="l-it" data-l="it">IT</button><button type="button" id="l-nl" data-l="nl">NL</button><button type="button" id="l-da" data-l="da">DA</button><button type="button" id="l-fr" data-l="fr">FR</button>
       </div>
-      <select class="lang-sel" id="lang-sel" aria-label="Language"><option value="en">EN</option><option value="de">DE</option><option value="it">IT</option><option value="nl">NL</option><option value="da">DA</option><option value="fr">FR</option></select>
       <a class="book" href="#request" data-i18n="nav_book">Demander vos dates</a>
+      <button class="menu-btn" type="button" id="menu-btn" aria-controls="menu" aria-expanded="false"><span class="bars" aria-hidden="true"></span><span class="vh" data-i18n="nav_menu">Menu</span></button>
+    </div>
+  </div>
+  <div class="menu" id="menu" hidden>
+    <div class="wrap">
+      <a href="#house" data-i18n="nav_house">La maison</a>
+      <a href="#photos" data-i18n="nav_photos">Photos</a>
+      <a href="#glance" data-i18n="nav_glance">En bref</a>
+      <a href="#wellbeing" data-i18n="nav_well">Bien-être</a>
+      <a href="#area" data-i18n="ar_l">La région</a>
+      <a href="#about" data-i18n="ab_l">Qui sommes-nous</a>
+      <a href="#prices" data-i18n="nav_prices">Tarifs</a>
+      <a href="#faq" data-faq data-i18n="faq_h">Questions et réponses</a>
+      <div class="menu-langs" role="group" aria-label="Language"><button type="button" data-l="en">EN</button><button type="button" data-l="de">DE</button><button type="button" data-l="it">IT</button><button type="button" data-l="nl">NL</button><button type="button" data-l="da">DA</button><button type="button" data-l="fr">FR</button></div>
     </div>
   </div>
 </nav>
@@ -384,6 +422,7 @@ body.locked{overflow:hidden}
     <p class="place">San Dalmazio, Toscana</p>
     <h1>Casa La Fonte</h1>
     <p class="sub" data-i18n="hero_sub">Une élégante ferme de 400 ans, avec maison d’amis et piscine privée chauffée, à l’orée paisible d’un village perché entre Volterra et la mer.</p>
+    <div class="hero-cta"><a class="hbtn" href="#photos" data-i18n="btn_photos">Voir les 42 photos</a><a class="hbtn" href="#glance" data-i18n="btn_glance">La maison en bref</a></div>
   </div>
 </header>
 
@@ -483,6 +522,24 @@ body.locked{overflow:hidden}
       </div>
     </div>
     <div class="more"><a class="ghost" href="#photos" data-i18n="btn_photos">Voir les 42 photos</a><a class="ghost" href="#glance" data-i18n="btn_glance">La maison en bref</a></div>
+  </div>
+</section>
+
+<section id="facts">
+  <div class="wrap">
+    <div class="head">
+      <p class="label" data-i18n="fa_l">Bon à savoir</p>
+      <h2 data-i18n="fa_h">La maison en pratique</h2>
+    </div>
+    <div class="facts">
+      <div class="fact"><p class="k" data-i18n="k1">Arrivée</p><p class="v" data-i18n="v1">Arrivée à partir de 16 h, départ avant 10 h. Dans votre GPS, indiquez le Ristorante La Rocca, sur la place du village ; la maison se trouve juste en contrebas.</p></div>
+      <div class="fact"><p class="k" data-i18n="k2">Le chemin d’accès</p><p class="v" data-i18n="v2">Un chemin court et pentu d’environ 50 mètres descend de la place jusqu’à la maison. N’importe quelle voiture ordinaire s’en sort sans peine ; avec un van ou un véhicule plus grand, vous pouvez vous garer gratuitement sur la place, à une minute à pied.</p></div>
+      <div class="fact"><p class="k" data-i18n="k3">Une voiture</p><p class="v" data-i18n="v3">Le meilleur moyen de découvrir la région. L’aéroport de Pise est à environ 1 h 20, Florence à environ 1 h 30, et le supermarché de Pomarance à une quinzaine de minutes.</p></div>
+      <div class="fact"><p class="k" data-i18n="k4">Fraîcheur</p><p class="v" data-i18n="v4">Des murs de pierre d’un demi-mètre gardent naturellement la maison au frais, et chaque chambre a son propre ventilateur pour les nuits les plus chaudes. Ouvrez les fenêtres le soir (toutes ont des moustiquaires) et fermez-les en journée : la maison reste agréable sans climatisation.</p></div>
+      <div class="fact"><p class="k" data-i18n="k5">Le paysage</p><p class="v" data-i18n="v5">San Dalmazio est tout près de Larderello, berceau de la géothermie, cette même énergie propre qui chauffe la maison et l’eau chaude.</p></div>
+      <div class="fact"><p class="k" data-i18n="k7">Chiens</p><p class="v" data-i18n="v7">Les bienvenus, pour 75 € par séjour. Le jardin n’est pas clôturé et le terrain descend en pente raide derrière la pelouse : merci de garder un œil sur eux à cet endroit.</p></div>
+      <div class="fact"><p class="k" data-i18n="k6">Inclus</p><p class="v" data-i18n="v6">Wi-Fi, linge de lit et serviettes, lave-linge, lit bébé, parking gratuit.</p></div>
+    </div>
   </div>
 </section>
 
@@ -685,25 +742,9 @@ body.locked{overflow:hidden}
   </div>
 </section>
 
-<section id="facts">
-  <div class="wrap">
-    <div class="head">
-      <p class="label" data-i18n="fa_l">Bon à savoir</p>
-      <h2 data-i18n="fa_h">La maison en pratique</h2>
-    </div>
-    <div class="facts">
-      <div class="fact"><p class="k" data-i18n="k1">Arrivée</p><p class="v" data-i18n="v1">Arrivée à partir de 16 h, départ avant 10 h. Dans votre GPS, indiquez le Ristorante La Rocca, sur la place du village ; la maison se trouve juste en contrebas.</p></div>
-      <div class="fact"><p class="k" data-i18n="k2">Le chemin d’accès</p><p class="v" data-i18n="v2">Un chemin court et pentu d’environ 50 mètres descend de la place jusqu’à la maison. N’importe quelle voiture ordinaire s’en sort sans peine ; avec un van ou un véhicule plus grand, vous pouvez vous garer gratuitement sur la place, à une minute à pied.</p></div>
-      <div class="fact"><p class="k" data-i18n="k3">Une voiture</p><p class="v" data-i18n="v3">Le meilleur moyen de découvrir la région. L’aéroport de Pise est à environ 1 h 20, Florence à environ 1 h 30, et le supermarché de Pomarance à une quinzaine de minutes.</p></div>
-      <div class="fact"><p class="k" data-i18n="k4">Fraîcheur</p><p class="v" data-i18n="v4">Des murs de pierre d’un demi-mètre gardent naturellement la maison au frais, et chaque chambre a son propre ventilateur pour les nuits les plus chaudes. Ouvrez les fenêtres le soir (toutes ont des moustiquaires) et fermez-les en journée : la maison reste agréable sans climatisation.</p></div>
-      <div class="fact"><p class="k" data-i18n="k5">Le paysage</p><p class="v" data-i18n="v5">San Dalmazio est tout près de Larderello, berceau de la géothermie, cette même énergie propre qui chauffe la maison et l’eau chaude.</p></div>
-      <div class="fact"><p class="k" data-i18n="k7">Chiens</p><p class="v" data-i18n="v7">Les bienvenus, pour 75 € par séjour. Le jardin n’est pas clôturé et le terrain descend en pente raide derrière la pelouse : merci de garder un œil sur eux à cet endroit.</p></div>
-      <div class="fact"><p class="k" data-i18n="k6">Inclus</p><p class="v" data-i18n="v6">Wi-Fi, linge de lit et serviettes, lave-linge, lit bébé, parking gratuit.</p></div>
-    </div>
-  </div>
-</section>
 
 <footer>
+  <div class="wrap foot-links"><a href="#house" data-i18n="nav_house">La maison</a><a href="#photos" data-i18n="nav_photos">Photos</a><a href="#glance" data-i18n="nav_glance">En bref</a><a href="#wellbeing" data-i18n="nav_well">Bien-être</a><a href="#area" data-i18n="ar_l">La région</a><a href="#about" data-i18n="ab_l">Qui sommes-nous</a><a href="#prices" data-i18n="nav_prices">Tarifs</a><a href="#faq" data-faq data-i18n="faq_h">Questions et réponses</a></div>
   <div class="wrap">
     <span>Casa La Fonte · 56045 San Dalmazio (PI), Italia · Daniel Glaessl &amp; Eva Friedrich</span>
     <span><span data-i18n="ft_mgr">Sur place, la maison est entretenue par</span> <a class="x" href="https://www.convivum.it/" target="_blank" rel="noopener">Convivum</a>, Volterra</span>
@@ -834,7 +875,7 @@ function build(){
  mb.href="mailto:dglaessl@gmail.com?subject="+encodeURIComponent(t("subj"))+"&body="+encodeURIComponent(lastText);
 }
 function go(l){try{localStorage.setItem("clf-lang",l);}catch(e){}var u=l==="en"?"/":"/"+l+"/";if(location.pathname.replace(/index\.html$/,"")===u||location.protocol==="file:")setLang(l);else location.href=u;}
-document.getElementById("lang-sel").addEventListener("change",function(){go(this.value);});
+var lsel=document.getElementById("lang-sel");if(lsel)lsel.addEventListener("change",function(){go(this.value);});
 document.querySelectorAll(".langs button").forEach(function(b){b.addEventListener("click",function(){go(b.getAttribute("data-l"));});});
 document.querySelectorAll("a.wa").forEach(function(a){a.addEventListener("click",function(){ev("contact",{method:"whatsapp"});});});
 document.getElementById("request").addEventListener("submit",function(e){e.preventDefault();build();});
@@ -886,6 +927,21 @@ lb.addEventListener("click",function(e){if(e.target===lb){lb.hidden=true;}});
 var tx=null;lb.addEventListener("touchstart",function(e){tx=e.touches[0].clientX;},{passive:true});lb.addEventListener("touchend",function(e){if(tx===null)return;var d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>40)lbShow(cur+(d<0?1:-1));tx=null;});
 document.addEventListener("keydown",function(e){if(!lb.hidden){if(e.key==="Escape"){lb.hidden=true;}else if(e.key==="ArrowRight")lbShow(cur+1);else if(e.key==="ArrowLeft")lbShow(cur-1);e.stopPropagation();return;}if(open&&e.key==="Escape"){if(sheets[(location.hash||"").slice(1)])history.back();else hide();}},true);
 })();
+
+(function(){var nav=document.getElementById("nav"),btn=document.getElementById("menu-btn"),menu=document.getElementById("menu");
+function setM(o){menu.hidden=!o;nav.classList.toggle("open",o);btn.setAttribute("aria-expanded",String(o));}
+btn.addEventListener("click",function(){setM(menu.hidden);});
+menu.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){setM(false);});});
+menu.querySelectorAll(".menu-langs button").forEach(function(b){b.addEventListener("click",function(){setM(false);document.getElementById("l-"+b.getAttribute("data-l")).click();});});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!menu.hidden)setM(false);});
+function mark(){var l=document.documentElement.lang||"en";menu.querySelectorAll(".menu-langs button").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-l")===l));});}
+mark();new MutationObserver(mark).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});
+document.querySelectorAll("a[data-faq]").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();var o=document.getElementById("faq-open");if(document.getElementById("faq").hidden)o.click();});});
+var links=[].slice.call(document.querySelectorAll(".links a.sec")),secs=links.map(function(a){return document.querySelector(a.getAttribute("href"));});
+function spy(){var y=window.scrollY+window.innerHeight*0.35,cur=-1;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i;});
+ var last=secs[secs.length-1];if(cur===secs.length-1&&last&&y>last.offsetTop+last.offsetHeight)cur=-1;
+ links.forEach(function(a,i){if(i===cur)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current");});}
+window.addEventListener("scroll",spy,{passive:true});spy();})();
 </script>
 </body>
 </html>
