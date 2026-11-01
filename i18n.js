@@ -79,7 +79,7 @@ de: {
  seh1:"Ostern 2027, 25. März – 5. April", seh2:"Himmelfahrt und Pfingsten 2027, 6. – 26. Mai", se2:"Juni", se3:"Juli und August", se4:"September", se5:"Oktober",
  minn:"mindestens {n} Nächte", pn:"pro Nacht", nights:"Nächte", est:"Euer Aufenthalt", allin:"alles inklusive",
  closed:"Einige Nächte liegen außerhalb der Saison (25. März – 31. Oktober).", short:"In dieser Saison gilt ein Mindestaufenthalt von {n} Nächten.", order:"Die Abreise muss nach der Anreise liegen.", fill:"Bitte Name, E-Mail und Daten angeben.",
- copied:"Kopiert", copyfail:"Text markieren und kopieren", subj:"Casa La Fonte – Buchungsanfrage", hello:"Hallo Daniel und Eva,", body:"wir würden gerne vom {in} bis {out} ({n} Nächte) in der Casa La Fonte wohnen: {a} Erwachsene und {c} Kinder.", sign:"Viele Grüße,"
+ copied:"Kopiert",sending:"Eure Anfrage wird gesendet…",sent:"Danke! Eure Anfrage ist unterwegs. Wir haben euch eine Bestätigung gemailt und melden uns innerhalb eines Tages.",sendfail:"Von hier aus hat es nicht geklappt, deshalb öffnet sich euer E-Mail-Programm mit der fertigen Nachricht.", copyfail:"Text markieren und kopieren", subj:"Casa La Fonte – Buchungsanfrage", hello:"Hallo Daniel und Eva,", body:"wir würden gerne vom {in} bis {out} ({n} Nächte) in der Casa La Fonte wohnen: {a} Erwachsene und {c} Kinder.", sign:"Viele Grüße,"
 },
 it: {
  meta_t:"Casa La Fonte · Casale in Toscana con piscina riscaldata vicino a Volterra", meta_d:"Casa vacanze a San Dalmazio, in Toscana: un elegante casale in pietra di 400 anni con dépendance e piscina privata riscaldata ad acqua salata, a 30 minuti da Volterra. Fino a 7 ospiti, cani benvenuti. Prenotate direttamente dai proprietari.",
@@ -161,7 +161,7 @@ it: {
  seh1:"Pasqua 2027, 25 marzo – 5 aprile", seh2:"Ascensione e Pentecoste 2027, 6 – 26 maggio", se2:"Giugno", se3:"Luglio e agosto", se4:"Settembre", se5:"Ottobre",
  minn:"minimo {n} notti", pn:"a notte", nights:"notti", est:"Il vostro soggiorno", allin:"tutto incluso",
  closed:"Alcune notti sono fuori stagione (25 marzo – 31 ottobre).", short:"In questa stagione il soggiorno minimo è di {n} notti.", order:"La partenza deve essere dopo l'arrivo.", fill:"Inserite nome, e-mail e date.",
- copied:"Copiato", copyfail:"Selezionate il testo e copiatelo", subj:"Casa La Fonte – richiesta di prenotazione", hello:"Ciao Daniel ed Eva,", body:"vorremmo soggiornare a Casa La Fonte dal {in} al {out} ({n} notti): {a} adulti e {c} bambini.", sign:"Cordiali saluti,"
+ copied:"Copiato",sending:"Invio della richiesta…",sent:"Grazie! La vostra richiesta è partita. Vi abbiamo inviato una conferma via email e vi rispondiamo entro un giorno.",sendfail:"Non siamo riusciti a inviarla da qui: si aprirà il vostro programma di posta con il messaggio pronto.", copyfail:"Selezionate il testo e copiatelo", subj:"Casa La Fonte – richiesta di prenotazione", hello:"Ciao Daniel ed Eva,", body:"vorremmo soggiornare a Casa La Fonte dal {in} al {out} ({n} notti): {a} adulti e {c} bambini.", sign:"Cordiali saluti,"
 },
 nl: {
  meta_t:"Casa La Fonte · Vakantiehuis in Toscane met verwarmd zwembad bij Volterra", meta_d:"Vakantiehuis in San Dalmazio, Toscane: een stijlvolle, 400 jaar oude stenen boerderij met gastenverblijf en privé verwarmd zoutwaterzwembad, 30 minuten van Volterra. Tot 7 gasten, honden welkom. Boek rechtstreeks bij de eigenaren.",
@@ -243,7 +243,7 @@ nl: {
  seh1:"Pasen 2027, 25 maart – 5 april", seh2:"Hemelvaart en Pinksteren 2027, 6 – 26 mei", se2:"Juni", se3:"Juli en augustus", se4:"September", se5:"Oktober",
  minn:"minimaal {n} nachten", pn:"per nacht", nights:"nachten", est:"Jullie verblijf", allin:"alles inbegrepen",
  closed:"Sommige nachten vallen buiten het seizoen (25 maart – 31 oktober).", short:"In dit seizoen is het minimale verblijf {n} nachten.", order:"Vertrek moet na aankomst liggen.", fill:"Vul je naam, e-mail en data in.",
- copied:"Gekopieerd", copyfail:"Selecteer de tekst en kopieer hem", subj:"Casa La Fonte – boekingsaanvraag", hello:"Hoi Daniel en Eva,", body:"we zouden graag van {in} tot {out} ({n} nachten) in Casa La Fonte verblijven: {a} volwassenen en {c} kinderen.", sign:"Met vriendelijke groet,"
+ copied:"Gekopieerd",sending:"Je aanvraag wordt verstuurd…",sent:"Bedankt! Je aanvraag is onderweg. We hebben je een bevestiging gemaild en antwoorden binnen een dag.",sendfail:"Versturen lukte hier niet, dus je e-mailprogramma opent met het bericht klaar om te verzenden.", copyfail:"Selecteer de tekst en kopieer hem", subj:"Casa La Fonte – boekingsaanvraag", hello:"Hoi Daniel en Eva,", body:"we zouden graag van {in} tot {out} ({n} nachten) in Casa La Fonte verblijven: {a} volwassenen en {c} kinderen.", sign:"Met vriendelijke groet,"
 },
 da: {
  meta_t:"Casa La Fonte · Feriehus i Toscana med opvarmet pool ved Volterra", meta_d:"Feriehus i San Dalmazio, Toscana: et stilfuldt, 400 år gammelt stenhus med gæstehus og privat opvarmet saltvandspool, 30 minutter fra Volterra. Plads til 7, hunde er velkomne. Book direkte hos ejerne.",
@@ -325,7 +325,7 @@ da: {
  seh1:"Påske 2027, 25. marts – 5. april", seh2:"Kristi himmelfart og pinse 2027, 6. – 26. maj", se2:"Juni", se3:"Juli og august", se4:"September", se5:"Oktober",
  minn:"mindst {n} nætter", pn:"pr. nat", nights:"nætter", est:"Jeres ophold", allin:"alt inklusive",
  closed:"Nogle nætter ligger uden for sæsonen (25. marts – 31. oktober).", short:"I denne sæson er mindste ophold {n} nætter.", order:"Afrejse skal ligge efter ankomst.", fill:"Udfyld venligst navn, e-mail og datoer.",
- copied:"Kopieret", copyfail:"Markér teksten og kopiér den", subj:"Casa La Fonte – bookingforespørgsel", hello:"Hej Daniel og Eva,", body:"vi vil gerne bo i Casa La Fonte fra {in} til {out} ({n} nætter): {a} voksne og {c} børn.", sign:"Venlig hilsen,"
+ copied:"Kopieret",sending:"Sender jeres forespørgsel…",sent:"Tak! Jeres forespørgsel er sendt. Vi har mailet jer en bekræftelse og svarer inden for en dag.",sendfail:"Det lykkedes ikke at sende herfra, så jeres mailprogram åbner med beskeden klar til afsendelse.", copyfail:"Markér teksten og kopiér den", subj:"Casa La Fonte – bookingforespørgsel", hello:"Hej Daniel og Eva,", body:"vi vil gerne bo i Casa La Fonte fra {in} til {out} ({n} nætter): {a} voksne og {c} børn.", sign:"Venlig hilsen,"
 },
 fr: {
  meta_t:"Casa La Fonte · Ferme en Toscane avec piscine chauffée près de Volterra", meta_d:"Location de vacances à San Dalmazio, en Toscane : une élégante ferme en pierre de 400 ans avec maison d’amis et piscine privée chauffée à l’eau salée, à 30 minutes de Volterra. Jusqu’à 7 personnes, chiens bienvenus. Réservez directement auprès des propriétaires.",
@@ -407,7 +407,7 @@ fr: {
  seh1:"Pâques 2027, 25 mars – 5 avril", seh2:"Ascension et Pentecôte 2027, 6 – 26 mai", se2:"Juin", se3:"Juillet et août", se4:"Septembre", se5:"Octobre",
  minn:"minimum {n} nuits", pn:"par nuit", nights:"nuits", est:"Votre séjour", allin:"tout compris",
  closed:"Certaines nuits tombent en dehors de la saison (25 mars – 31 octobre).", short:"Pour cette saison, le séjour minimum est de {n} nuits.", order:"Le départ doit être postérieur à l’arrivée.", fill:"Veuillez indiquer votre nom, votre e-mail et vos dates.",
- copied:"Copié", copyfail:"Sélectionnez le texte et copiez-le", subj:"Casa La Fonte – demande de réservation", hello:"Bonjour Daniel et Eva,", body:"nous aimerions séjourner à Casa La Fonte du {in} au {out} ({n} nuits)\u00a0: {a} adultes et {c} enfants.", sign:"Bien cordialement,"
+ copied:"Copié",sending:"Envoi de votre demande…",sent:"Merci ! Votre demande est partie. Nous vous avons envoyé une confirmation par e-mail et vous répondons sous un jour.",sendfail:"L’envoi n’a pas fonctionné ici : votre messagerie va s’ouvrir avec le message prêt à partir.", copyfail:"Sélectionnez le texte et copiez-le", subj:"Casa La Fonte – demande de réservation", hello:"Bonjour Daniel et Eva,", body:"nous aimerions séjourner à Casa La Fonte du {in} au {out} ({n} nuits)\u00a0: {a} adultes et {c} enfants.", sign:"Bien cordialement,"
 }
 };
 // Added 27 Oct 2026: photos, at a glance, about us
