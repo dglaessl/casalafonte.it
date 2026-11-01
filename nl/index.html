@@ -238,6 +238,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
 .month .g .wd{color:var(--soft);font-size:.65rem}
 .month .g .b{background:color-mix(in srgb,var(--soft) 55%,transparent);color:var(--paper);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--paper) 60%,transparent)}
 .month .g .x{color:var(--rule)}
+.month .g button{font:inherit;padding:.28rem 0;border:0;border-radius:2px;background:none;color:var(--ink);cursor:pointer}
+.month .g button:hover{outline:1px solid var(--sage)}
+.month .g button:focus-visible{outline:2px solid var(--sun);outline-offset:1px}
+.month .g button.b{cursor:default}
+.month .g .r{background:color-mix(in srgb,var(--sage) 22%,transparent)}
+.month .g .s{background:var(--sage);color:var(--sage-ink);text-decoration:none}
+.pick{font-size:.9rem;color:var(--muted);margin:.2rem 0 1rem;min-height:1.4em}
 .upd{font-size:.8rem;color:var(--soft);margin-top:1rem}
 .quote{display:grid;gap:.25rem;font-size:.95rem;color:var(--muted);font-variant-numeric:tabular-nums}
 .quote b{color:var(--ink);font-weight:400}
@@ -718,6 +725,7 @@ section[id]{scroll-margin-top:40px}#request{scroll-margin-top:96px}
 
     <div class="avail" id="availability" hidden>
       <div class="avail-head"><h3 data-i18n="av_h">Beschikbaarheid 2027</h3><div class="legend"><span><i></i><span data-i18n="av_free">Vrij</span></span><span><i class="lb"></i><span data-i18n="av_bk">Bezet</span></span></div></div>
+      <p class="pick" id="pickhint" role="status"></p>
       <div class="months" id="months"></div>
       <p class="upd" id="upd"></p>
     </div>
@@ -837,7 +845,7 @@ function direct(sub,n){return Math.floor(DIRECT*(sub*(1-disc(n))+CLEAN)/5)*5;}
 SEASONS.forEach(function(s){s.price=Math.floor(DIRECT*(s.plat*0.9+CLEAN/7)/5)*5;});
 var D=window.CLF_I18N||{};
 D.en=Object.assign({se1:"Spring, 25 March – 31 May",seh1:"Easter 2027, 25 March – 5 April",seh2:"Ascension and Pentecost 2027, 6 – 26 May",se2:"June",se3:"July and August",se4:"September",se5:"October",
- minn:"minimum {n} nights",av_upd:"Updated {d}",clash:"Some of these nights are already booked; see the calendar above.",q_dep:"30% deposit to confirm",q_bal:"Balance due by {d}",q_now:"Arrival is less than 30 days away, so the full amount is due on booking.",q_cx:"Full refund of the deposit if you cancel by {d}",q_cx0:"Arrival is less than 60 days away, so payments are non-refundable unless we can rebook your dates.",q_name:"Add your name and email to send the request.",q_pet:"Pet fee, per stay (included above)",body_dog:"We would like to bring {d} dog(s).",fill2:"Please add your arrival and departure dates.",pn:"per night",nights:"nights",est:"Your stay",allin:"all-inclusive",
+ minn:"minimum {n} nights",av_upd:"Updated {d}",av_pick:"Tap your arrival day, then your departure day.",av_pick2:"Now tap your departure day.",av_picked:"{a} – {b} selected. The price is below.",av_clash:"That stay includes a booked night. Please choose other dates.",clash:"Some of these nights are already booked; see the calendar above.",q_dep:"30% deposit to confirm",q_bal:"Balance due by {d}",q_now:"Arrival is less than 30 days away, so the full amount is due on booking.",q_cx:"Full refund of the deposit if you cancel by {d}",q_cx0:"Arrival is less than 60 days away, so payments are non-refundable unless we can rebook your dates.",q_name:"Add your name and email to send the request.",q_pet:"Pet fee, per stay (included above)",body_dog:"We would like to bring {d} dog(s).",fill2:"Please add your arrival and departure dates.",pn:"per night",nights:"nights",est:"Your stay",allin:"all-inclusive",
  closed:"Some nights fall outside the season (25 March – 31 October).",short:"This season has a minimum stay of {n} nights.",order:"Departure must be after arrival.",fill:"Please add your name, email and dates.",
  copied:"Copied",sending:"Sending your request…",sent:"Thank you! Your request is on its way. We have emailed you a confirmation and will reply within a day.",sendfail:"We couldn’t send it from here, so your email app will open with the message ready to send.",copyfail:"Select the text and copy it",subj:"Casa La Fonte – booking request",hello:"Hi Daniel and Eva,",body:"we would like to stay at Casa La Fonte from {in} to {out} ({n} nights): {a} adults and {c} children.",sign:"Best regards,",meta_t:"Casa La Fonte · Tuscan farmhouse with heated pool near Volterra",meta_d:"Holiday rental in San Dalmazio, Tuscany: a stylish 400-year-old stone farmhouse with guesthouse and private heated saltwater pool, 30 minutes from Volterra. Sleeps up to 7, dogs welcome. Book directly with the owners.",wa_txt:"Hi Daniel and Eva, we're interested in staying at Casa La Fonte."},D.en||{});
 document.querySelectorAll("[data-i18n]").forEach(function(el){var k=el.getAttribute("data-i18n");if(!(k in D.en))D.en[k]=el.innerHTML;});
@@ -860,9 +868,18 @@ function cal(){var box=document.getElementById("months");if(!box)return;document
   h+='<div class="month"><h4>'+new Intl.DateTimeFormat(loc,{month:"long",timeZone:"UTC"}).format(first)+'</h4><div class="g">';
   wd.forEach(function(w){h+='<span class="wd">'+w+'</span>';});
   for(var e=0;e<off;e++)h+='<span></span>';
-  for(var d=1;d<=days;d++){var iso=y+"-"+String(m+1).padStart(2,"0")+"-"+String(d).padStart(2,"0");var out=(m===2&&d<25);h+='<span class="'+(out?"x":(booked(iso)?"b":""))+'">'+d+'</span>';}
+  for(var d=1;d<=days;d++){var iso=y+"-"+String(m+1).padStart(2,"0")+"-"+String(d).padStart(2,"0");var out=(m===2&&d<25);if(out){h+='<span class="x">'+d+'</span>';}else{var cl=booked(iso)?"b":"";var vi=v("f-in"),vo=v("f-out");if(iso===vi||iso===vo)cl+=" s";else if(vi&&vo&&iso>vi&&iso<vo)cl+=" r";h+='<button type="button" class="'+cl+'" data-iso="'+iso+'">'+d+'</button>';}}
   h+='</div></div>';}
- box.innerHTML=h;document.getElementById("upd").textContent=busyUpd?f(t("av_upd"),{d:ds(busyUpd.slice(0,10))}):"";}
+ box.innerHTML=h;hint();document.getElementById("upd").textContent=busyUpd?f(t("av_upd"),{d:ds(busyUpd.slice(0,10))}):"";}
+function hint(){var el=document.getElementById("pickhint");if(!el)return;var vi=v("f-in"),vo=v("f-out");el.textContent=pickMsg||(vi&&!vo?t("av_pick2"):(vi&&vo?f(t("av_picked"),{a:ds(vi),b:ds(vo)}):t("av_pick")));}
+var pickMsg="";
+function rangeFree(a,b){for(var x=a;x<b;x=isoAdd(x,1)){if(booked(x))return false;}return true;}
+document.getElementById("months").addEventListener("click",function(e){var bt=e.target.closest("button[data-iso]");if(!bt)return;var iso=bt.getAttribute("data-iso"),fi=document.getElementById("f-in"),fo=document.getElementById("f-out");pickMsg="";
+ if(!fi.value||fo.value||iso<=fi.value){if(booked(iso)){pickMsg=t("av_clash");fi.value="";fo.value="";}else{fi.value=iso;fo.value="";}}
+ else if(!rangeFree(fi.value,iso)){pickMsg=t("av_clash");fi.value="";fo.value="";}
+ else{fo.value=iso;}
+ cal();if(fi.value&&fo.value)build();});
+["f-in","f-out"].forEach(function(id){document.getElementById(id).addEventListener("change",function(){pickMsg="";cal();});});
 fetch("/busy.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).then(function(j){if(j){BUSY=j.busy||[];busyUpd=j.updated||"";}cal();}).catch(function(){cal();});
 function build(){
  var name=v("f-name"),email=v("f-email"),di=v("f-in"),dout=v("f-out"),a=+v("f-ad")||0,c=+v("f-ch")||0,dg=+v("f-dog")||0,msg=v("f-msg");
