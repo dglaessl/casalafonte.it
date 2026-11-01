@@ -1,0 +1,27 @@
+name: Calendar check
+
+# Twice a day: are Airbnb, Vrbo (and later Booking.com) free of double bookings,
+# and is every reservation blocked on the other channels? A failed run emails the owner.
+on:
+  schedule:
+    - cron: "5 13 * * *"   # 07:05 Austin / 14:05 Italy (winter)
+    - cron: "5 1 * * *"    # 19:05 Austin / 02:05 Italy (winter)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compare channel calendars
+        env:
+          AIRBNB_ICAL: ${{ secrets.AIRBNB_ICAL }}
+          VRBO_ICAL: ${{ secrets.VRBO_ICAL }}
+          BOOKING_ICAL: ${{ secrets.BOOKING_ICAL }}
+        run: python scripts/calendar_check.py
