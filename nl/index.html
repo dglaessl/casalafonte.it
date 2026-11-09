@@ -936,6 +936,12 @@ function conv(m){ev("conversion",{send_to:"AW-18537138830/xeh3CMzIyakdEI6VmYdF",
 window.clfConv=conv;window.clfEv=ev;
 document.getElementById("mailbtn").addEventListener("click",function(){if(!window.CLF_REQ_URL)conv("request_form");});
 document.getElementById("copy").addEventListener("click",function(){conv("copy_message");});
+/* Funnel steps (secondary conversions in Google Ads, not used for bidding): visitor saw the request form, visitor started filling it in. Each fires once per page view. */
+(function(){var f=document.getElementById("request");if(!f)return;var seen=false,started=false;
+function seenNow(){if(seen)return;seen=true;ev("conversion",{send_to:"AW-18537138830/ehVuCLX7nbUdEI6VmYdF"});ev("request_form_seen");}
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){seenNow();io.disconnect();}});},{threshold:0});io.observe(f);}
+function start(){if(started)return;started=true;seenNow();ev("conversion",{send_to:"AW-18537138830/5bplCI74nbUdEI6VmYdF"});ev("request_form_started");}
+f.addEventListener("focusin",start);f.addEventListener("input",start);})();
 document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){if(a.id!=="mailbtn")a.addEventListener("click",function(){ev("contact",{method:"email"});});});
 document.getElementById("request").addEventListener("submit",function(){ev("view_price");});})();
 </script>
