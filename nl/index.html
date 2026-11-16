@@ -943,6 +943,8 @@ if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es
 function start(){if(started)return;started=true;seenNow();ev("conversion",{send_to:"AW-18537138830/5bplCI74nbUdEI6VmYdF"});ev("request_form_started");}
 f.addEventListener("focusin",start);f.addEventListener("input",start);})();
 document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){if(a.id!=="mailbtn")a.addEventListener("click",function(){ev("contact",{method:"email"});});});
+/* WhatsApp contact clicks: own conversion action in the "Contact" goal (not used by the campaign for bidding). Fires once per page view. */
+(function(){var w=false;document.querySelectorAll("a.wa").forEach(function(a){a.addEventListener("click",function(){ev("contact",{method:"whatsapp"});if(w)return;w=true;ev("conversion",{send_to:"AW-18537138830/t2GmCPbts7kdEI6VmYdF"});});});})();
 document.getElementById("request").addEventListener("submit",function(){ev("view_price");});})();
 </script>
 <script>
