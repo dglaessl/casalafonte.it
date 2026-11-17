@@ -383,6 +383,8 @@ body.locked{overflow:hidden}
 .hero-cta{display:flex;flex-wrap:wrap;gap:.4rem 1.8rem;margin-top:1.4rem}
 .hbtn{font-family:var(--f-ui);font-size:.8rem;letter-spacing:.03em;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.45);padding:.2rem 0;opacity:.9;transition:opacity .2s,border-color .2s}
 .hbtn:hover{opacity:1;border-bottom-color:#fff}
+.hmain{background:#fff;color:#1f2a24;border:0;padding:.7rem 1.3rem;border-radius:2px;font-weight:600;opacity:1;flex-basis:100%;max-width:max-content}
+.hmain:hover{background:#f1ede4}
 .foot-links{margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1px solid var(--rule);justify-content:flex-start!important;gap:.5rem 1.6rem!important}
 .foot-links a{color:var(--ink);text-decoration:none}.foot-links a:hover{text-decoration:underline}
 section[id]{scroll-margin-top:40px}#request{scroll-margin-top:96px}
@@ -427,7 +429,7 @@ section[id]{scroll-margin-top:40px}#request{scroll-margin-top:96px}
     <p class="place">San Dalmazio, Toscana</p>
     <h1>Casa La Fonte</h1>
     <p class="sub" data-i18n="hero_sub">A stylish centuries-old farmhouse with a guesthouse and a private heated pool, on the quiet edge of a hill village between Volterra and the sea.</p>
-    <div class="hero-cta"><a class="hbtn" href="#photos" data-i18n="btn_photos">Photo gallery</a><a class="hbtn" href="#glance" data-i18n="btn_glance">The house at a glance</a></div>
+    <div class="hero-cta"><a class="hbtn hmain" id="hero-check" href="#prices" data-i18n="hero_check">Check dates &amp; prices</a><a class="hbtn" href="#photos" data-i18n="btn_photos">Photo gallery</a><a class="hbtn" href="#glance" data-i18n="btn_glance">The house at a glance</a></div>
   </div>
 </header>
 
@@ -940,6 +942,7 @@ function seenNow(){if(seen)return;seen=true;ev("conversion",{send_to:"AW-1853713
 if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){seenNow();io.disconnect();}});},{threshold:0});io.observe(f);}
 function start(){if(started)return;started=true;seenNow();ev("conversion",{send_to:"AW-18537138830/5bplCI74nbUdEI6VmYdF"});ev("request_form_started");}
 f.addEventListener("focusin",start);f.addEventListener("input",start);})();
+(function(){var h=document.getElementById("hero-check");if(h)h.addEventListener("click",function(){ev("hero_check_click");});})();
 document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){if(a.id!=="mailbtn")a.addEventListener("click",function(){ev("contact",{method:"email"});});});
 /* WhatsApp contact clicks: own conversion action in the "Contact" goal (not used by the campaign for bidding). Fires once per page view. */
 (function(){var w=false;document.querySelectorAll("a.wa").forEach(function(a){a.addEventListener("click",function(){ev("contact",{method:"whatsapp"});if(w)return;w=true;ev("conversion",{send_to:"AW-18537138830/t2GmCPbts7kdEI6VmYdF"});});});})();

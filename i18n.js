@@ -473,3 +473,9 @@ Object.assign(window.CLF_I18N.it,{"o7p":"Il nostro team di Convivum può fare la
 Object.assign(window.CLF_I18N.nl,{"o7p":"Ons team van Convivum kan vóór uw aankomst boodschappen voor u doen, zodat de koelkast gevuld is als u binnenkomt. Stuur ons uw boodschappenlijstje bij het boeken; prijs op aanvraag."});
 Object.assign(window.CLF_I18N.da,{"o7p":"Vores team fra Convivum kan handle ind for jer før ankomsten, så køleskabet er fyldt, når I træder ind. Send os jeres indkøbsliste, når I booker; pris efter aftale."});
 Object.assign(window.CLF_I18N.fr,{"o7p":"Notre équipe de Convivum peut faire vos courses avant votre arrivée, pour que le frigo soit rempli quand vous entrez. Envoyez-nous votre liste au moment de réserver ; prix sur demande."});
+
+Object.assign(window.CLF_I18N.de,{"hero_check":"Termine & Preise prüfen"});
+Object.assign(window.CLF_I18N.it,{"hero_check":"Verifica date e prezzi"});
+Object.assign(window.CLF_I18N.nl,{"hero_check":"Data en prijzen bekijken"});
+Object.assign(window.CLF_I18N.da,{"hero_check":"Se ledige datoer og priser"});
+Object.assign(window.CLF_I18N.fr,{"hero_check":"Voir dates et prix"});
