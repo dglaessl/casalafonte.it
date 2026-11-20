@@ -199,6 +199,8 @@ footer{border-top:1px solid var(--rule);padding-block:2.6rem 3.2rem;font-size:.8
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem 2rem}
 
 /* questions panel */
+.sbar{display:none}
+@media (max-width:720px){.sbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:29;background:var(--sage);color:var(--sage-ink);text-align:center;font-family:var(--f-ui);font-size:.95rem;font-weight:600;text-decoration:none;padding:.9rem 1rem calc(.9rem + env(safe-area-inset-bottom,0px));transform:translateY(110%);transition:transform .3s}body.sbar-on .sbar{transform:none}body.sbar-on .faq-open{bottom:calc(64px + env(safe-area-inset-bottom,0px))}}
 .faq-open{position:fixed;right:max(20px,env(safe-area-inset-right,0px));bottom:max(20px,env(safe-area-inset-bottom,0px));z-index:30;font:inherit;font-family:var(--f-display);font-style:italic;font-size:1.15rem;background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:.55rem 1.25rem;cursor:pointer;box-shadow:0 6px 24px rgba(30,24,18,.12)}
 .faq-open:hover{border-color:var(--soft)}
 .faq{position:fixed;right:max(20px,env(safe-area-inset-right,0px));bottom:max(20px,env(safe-area-inset-bottom,0px));z-index:31;width:min(400px,calc(100vw - 32px));max-height:min(78vh,680px);display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--rule);border-radius:14px;box-shadow:0 18px 60px rgba(30,24,18,.18)}
@@ -985,5 +987,7 @@ function spy(){var y=window.scrollY+window.innerHeight*0.35,cur=-1;secs.forEach(
  links.forEach(function(a,i){if(i===cur)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current");});}
 window.addEventListener("scroll",spy,{passive:true});spy();})();
 </script>
+<a class="sbar" id="sticky-check" href="#prices" data-i18n="hero_check" aria-hidden="true" tabindex="-1">Check dates &amp; prices</a>
+<script>(function(){var b=document.getElementById("sticky-check"),hero=document.getElementById("top"),pr=document.getElementById("prices");if(!b||!hero||!pr||!("IntersectionObserver" in window))return;var hv=true,pv=false;function u(){var on=!hv&&!pv;document.body.classList.toggle("sbar-on",on);b.setAttribute("aria-hidden",on?"false":"true");b.tabIndex=on?0:-1;}new IntersectionObserver(function(e){hv=e[0].isIntersecting;u();}).observe(hero);new IntersectionObserver(function(e){pv=e[0].isIntersecting;u();}).observe(pr);b.addEventListener("click",function(){if(typeof gtag==="function")gtag("event","sticky_check_click");});})();</script>
 </body>
 </html>
