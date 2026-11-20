@@ -1,6 +1,6 @@
 window.CLF_I18N = {
 de: {
- meta_t:"Casa La Fonte · Ferienhaus in der Toskana mit beheiztem Pool bei Volterra", meta_d:"Ferienhaus in San Dalmazio, Toskana: ein stilvolles, jahrhundertealtes Bauernhaus aus Stein mit Gästehaus und privatem beheiztem Salzwasserpool, 30 Minuten von Volterra. Bis zu 7 Gäste, Hunde willkommen. Direkt bei den Eigentümern buchen.",
+ meta_t:"Casa La Fonte · San Dalmazio · Ferienhaus in der Toskana mit beheiztem Pool bei Volterra", meta_d:"Ferienhaus in San Dalmazio, Toskana: ein stilvolles, jahrhundertealtes Bauernhaus aus Stein mit Gästehaus und privatem beheiztem Salzwasserpool, 30 Minuten von Volterra. Bis zu 7 Gäste, Hunde willkommen. Direkt bei den Eigentümern buchen.",
  ft_mgr:"Vor Ort betreut von",
  wa_or:"oder per WhatsApp:", wa_txt:"Hallo Daniel und Eva, wir interessieren uns für einen Aufenthalt in der Casa La Fonte.",
  nav_house:"Das Haus", nav_well:"Wohlbefinden", nav_prices:"Preise", nav_book:"Anfragen",
@@ -82,7 +82,7 @@ de: {
  copied:"Kopiert",sending:"Eure Anfrage wird gesendet…",sent:"Danke! Eure Anfrage ist unterwegs. Wir haben euch eine Bestätigung gemailt und versuchen, uns innerhalb eines Tages zu melden.",sendfail:"Von hier aus hat es nicht geklappt, deshalb öffnet sich euer E-Mail-Programm mit der fertigen Nachricht.", copyfail:"Text markieren und kopieren", subj:"Casa La Fonte – Buchungsanfrage", hello:"Hallo Daniel und Eva,", body:"wir würden gerne vom {in} bis {out} ({n} Nächte) in der Casa La Fonte wohnen: {a} Erwachsene und {c} Kinder.", sign:"Viele Grüße,"
 },
 it: {
- meta_t:"Casa La Fonte · Casale in Toscana con piscina riscaldata vicino a Volterra", meta_d:"Casa vacanze a San Dalmazio, in Toscana: un elegante casale in pietra secolare con dépendance e piscina privata riscaldata ad acqua salata, a 30 minuti da Volterra. Fino a 7 ospiti, cani benvenuti. Prenotate direttamente dai proprietari.",
+ meta_t:"Casa La Fonte · San Dalmazio · Casale in Toscana con piscina riscaldata vicino a Volterra", meta_d:"Casa vacanze a San Dalmazio, in Toscana: un elegante casale in pietra secolare con dépendance e piscina privata riscaldata ad acqua salata, a 30 minuti da Volterra. Fino a 7 ospiti, cani benvenuti. Prenotate direttamente dai proprietari.",
  ft_mgr:"Sul posto se ne occupa",
  wa_or:"oppure su WhatsApp:", wa_txt:"Ciao Daniel ed Eva, siamo interessati a soggiornare a Casa La Fonte.",
  nav_house:"La casa", nav_well:"Benessere", nav_prices:"Prezzi", nav_book:"Richiedi date",
@@ -164,7 +164,7 @@ it: {
  copied:"Copiato",sending:"Invio della richiesta…",sent:"Grazie! La vostra richiesta è partita. Vi abbiamo inviato una conferma via email e cerchiamo di rispondervi entro un giorno.",sendfail:"Non siamo riusciti a inviarla da qui: si aprirà il vostro programma di posta con il messaggio pronto.", copyfail:"Selezionate il testo e copiatelo", subj:"Casa La Fonte – richiesta di prenotazione", hello:"Ciao Daniel ed Eva,", body:"vorremmo soggiornare a Casa La Fonte dal {in} al {out} ({n} notti): {a} adulti e {c} bambini.", sign:"Cordiali saluti,"
 },
 nl: {
- meta_t:"Casa La Fonte · Vakantiehuis in Toscane met verwarmd zwembad bij Volterra", meta_d:"Vakantiehuis in San Dalmazio, Toscane: een stijlvolle, eeuwenoude stenen boerderij met gastenverblijf en privé verwarmd zoutwaterzwembad, 30 minuten van Volterra. Tot 7 gasten, honden welkom. Boek rechtstreeks bij de eigenaren.",
+ meta_t:"Casa La Fonte · San Dalmazio · Vakantiehuis in Toscane met verwarmd zwembad bij Volterra", meta_d:"Vakantiehuis in San Dalmazio, Toscane: een stijlvolle, eeuwenoude stenen boerderij met gastenverblijf en privé verwarmd zoutwaterzwembad, 30 minuten van Volterra. Tot 7 gasten, honden welkom. Boek rechtstreeks bij de eigenaren.",
  ft_mgr:"Ter plaatse verzorgd door",
  wa_or:"of via WhatsApp:", wa_txt:"Hallo Daniel en Eva, we hebben interesse in een verblijf in Casa La Fonte.",
  nav_house:"Het huis", nav_well:"Welzijn", nav_prices:"Prijzen", nav_book:"Data aanvragen",
@@ -246,7 +246,7 @@ nl: {
  copied:"Gekopieerd",sending:"Je aanvraag wordt verstuurd…",sent:"Bedankt! Je aanvraag is onderweg. We hebben je een bevestiging gemaild en proberen binnen een dag te antwoorden.",sendfail:"Versturen lukte hier niet, dus je e-mailprogramma opent met het bericht klaar om te verzenden.", copyfail:"Selecteer de tekst en kopieer hem", subj:"Casa La Fonte – boekingsaanvraag", hello:"Hoi Daniel en Eva,", body:"we zouden graag van {in} tot {out} ({n} nachten) in Casa La Fonte verblijven: {a} volwassenen en {c} kinderen.", sign:"Met vriendelijke groet,"
 },
 da: {
- meta_t:"Casa La Fonte · Feriehus i Toscana med opvarmet pool ved Volterra", meta_d:"Feriehus i San Dalmazio, Toscana: et stilfuldt, flere hundrede år gammelt stenhus med gæstehus og privat opvarmet saltvandspool, 30 minutter fra Volterra. Plads til 7, hunde er velkomne. Book direkte hos ejerne.",
+ meta_t:"Casa La Fonte · San Dalmazio · Feriehus i Toscana med opvarmet pool ved Volterra", meta_d:"Feriehus i San Dalmazio, Toscana: et stilfuldt, flere hundrede år gammelt stenhus med gæstehus og privat opvarmet saltvandspool, 30 minutter fra Volterra. Plads til 7, hunde er velkomne. Book direkte hos ejerne.",
  ft_mgr:"På stedet passes huset af",
  wa_or:"eller på WhatsApp:", wa_txt:"Hej Daniel og Eva, vi er interesserede i et ophold i Casa La Fonte.",
  nav_house:"Huset", nav_well:"Velvære", nav_prices:"Priser", nav_book:"Forespørg",
@@ -328,7 +328,7 @@ da: {
  copied:"Kopieret",sending:"Sender jeres forespørgsel…",sent:"Tak! Jeres forespørgsel er sendt. Vi har mailet jer en bekræftelse og bestræber os på at svare inden for et døgn.",sendfail:"Det lykkedes ikke at sende herfra, så jeres mailprogram åbner med beskeden klar til afsendelse.", copyfail:"Markér teksten og kopiér den", subj:"Casa La Fonte – bookingforespørgsel", hello:"Hej Daniel og Eva,", body:"vi vil gerne bo i Casa La Fonte fra {in} til {out} ({n} nætter): {a} voksne og {c} børn.", sign:"Venlig hilsen,"
 },
 fr: {
- meta_t:"Casa La Fonte · Ferme en Toscane avec piscine chauffée près de Volterra", meta_d:"Location de vacances à San Dalmazio, en Toscane : une élégante ferme en pierre séculaire avec maison d’amis et piscine privée chauffée à l’eau salée, à 30 minutes de Volterra. Jusqu’à 7 personnes, chiens bienvenus. Réservez directement auprès des propriétaires.",
+ meta_t:"Casa La Fonte · San Dalmazio · Ferme en Toscane avec piscine chauffée près de Volterra", meta_d:"Location de vacances à San Dalmazio, en Toscane : une élégante ferme en pierre séculaire avec maison d’amis et piscine privée chauffée à l’eau salée, à 30 minutes de Volterra. Jusqu’à 7 personnes, chiens bienvenus. Réservez directement auprès des propriétaires.",
  ft_mgr:"Sur place, la maison est entretenue par",
  wa_or:"ou sur WhatsApp :", wa_txt:"Bonjour Daniel et Eva, nous aimerions séjourner à Casa La Fonte.",
  nav_house:"La maison", nav_well:"Bien-être", nav_prices:"Tarifs", nav_book:"Demander vos dates",
